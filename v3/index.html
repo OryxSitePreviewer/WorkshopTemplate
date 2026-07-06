@@ -81,6 +81,7 @@
           <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
           <li><a href="#why" class="hover:text-white transition-colors">Why Us</a></li>
           <li><a href="#pickup" class="hover:text-white transition-colors">Free Pickup</a></li>
+          <li><a href="#work" class="hover:text-white transition-colors">Our Work</a></li>
           <li><a href="#reviews" class="hover:text-white transition-colors">Reviews</a></li>
           <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
         </ul>
@@ -98,6 +99,7 @@
         <li><a href="#services" class="block rounded-lg px-3 py-2.5 hover:bg-white/10 hover:text-white">Services</a></li>
         <li><a href="#why" class="block rounded-lg px-3 py-2.5 hover:bg-white/10 hover:text-white">Why Us</a></li>
         <li><a href="#pickup" class="block rounded-lg px-3 py-2.5 hover:bg-white/10 hover:text-white">Free Pickup</a></li>
+        <li><a href="#work" class="block rounded-lg px-3 py-2.5 hover:bg-white/10 hover:text-white">Our Work</a></li>
         <li><a href="#reviews" class="block rounded-lg px-3 py-2.5 hover:bg-white/10 hover:text-white">Reviews</a></li>
         <li><a href="#contact" class="block rounded-lg px-3 py-2.5 hover:bg-white/10 hover:text-white">Contact</a></li>
         <li class="pt-2"><a href="https://wa.me/60199399006?text=Hi%20MDS%20Autowork,%20I%20would%20like%20to%20book%20an%20appointment%20for%20my%20car" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 rounded-full bg-orange px-4 py-3 font-bold text-white"><i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i> Book on WhatsApp</a></li>
@@ -239,6 +241,42 @@
         </div>
         <a href="https://www.google.com/maps/search/MDS+Autowork+Kajang" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-bold text-white hover:bg-white/10 transition-colors"><i class="fa-brands fa-google" aria-hidden="true"></i> Read reviews on Google</a>
       </div>
+    </section>
+
+    <!-- OUR WORK / GALLERY -->
+    <section id="work" class="py-20 sm:py-24 border-t border-white/5">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl reveal">
+          <p class="text-sm font-bold uppercase tracking-widest text-orange">Our work</p>
+          <h2 class="mt-2 font-display text-4xl sm:text-5xl font-bold tracking-tight text-white">Real jobs from our workshop</h2>
+          <p class="mt-4 text-lg text-slate-400">A look at some of the servicing and repairs we handle every day.</p>
+        </div>
+        <div id="work-grid" class="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4"></div>
+      </div>
+      <script>
+        (function () {
+          var BASE = '../assets/services/';
+          var WORK = [
+            ['aircond.jpg', 'Aircond servicing & recharge'],
+            ['aircond-compressor.jpg', 'Aircond compressor replacement'],
+            ['brakes.jpg', 'Brake disc & pad replacement'],
+            ['timing-belt.jpg', 'Timing belt & major service'],
+            ['drive-belt-tensioner.jpg', 'Drive belt & tensioner'],
+            ['drive-shaft.jpg', 'Drive shaft replacement'],
+            ['suspension.jpg', 'Shock absorber replacement'],
+            ['suspension-steering.jpg', 'Suspension & steering overhaul'],
+            ['steering-rack.jpg', 'Steering rack replacement'],
+            ['towing.jpg', 'Towing & workshop transport']
+          ];
+          var grid = document.getElementById('work-grid');
+          if (grid) grid.innerHTML = WORK.map(function (w) {
+            return '<figure class="group relative overflow-hidden rounded-2xl border border-white/10 bg-night-800">'
+              + '<img src="' + BASE + w[0] + '" alt="' + w[1] + '" loading="lazy" class="aspect-[3/4] w-full object-cover transition-transform duration-500 group-hover:scale-105">'
+              + '<figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-3 pt-10 text-xs font-semibold leading-snug text-white">' + w[1] + '</figcaption>'
+              + '</figure>';
+          }).join('');
+        })();
+      </script>
     </section>
 
     <!-- CONTACT -->

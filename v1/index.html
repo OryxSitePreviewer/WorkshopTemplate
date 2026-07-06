@@ -158,6 +158,7 @@
           <li><a href="#services" class="hover:text-white transition-colors duration-200">Services</a></li>
           <li><a href="#about"    class="hover:text-white transition-colors duration-200">Why Us</a></li>
           <li><a href="#pickup"   class="hover:text-white transition-colors duration-200">Free Pickup</a></li>
+          <li><a href="#work"     class="hover:text-white transition-colors duration-200">Our Work</a></li>
           <li><a href="#reviews"  class="hover:text-white transition-colors duration-200">Reviews</a></li>
           <li><a href="#location" class="hover:text-white transition-colors duration-200">Location</a></li>
         </ul>
@@ -186,6 +187,7 @@
         <li><a href="#services" class="block rounded-lg px-3 py-2.5 hover:bg-white/10 hover:text-white transition-colors">Services</a></li>
         <li><a href="#about"    class="block rounded-lg px-3 py-2.5 hover:bg-white/10 hover:text-white transition-colors">Why Us</a></li>
         <li><a href="#pickup"   class="block rounded-lg px-3 py-2.5 hover:bg-white/10 hover:text-white transition-colors">Free Pickup</a></li>
+        <li><a href="#work"     class="block rounded-lg px-3 py-2.5 hover:bg-white/10 hover:text-white transition-colors">Our Work</a></li>
         <li><a href="#reviews"  class="block rounded-lg px-3 py-2.5 hover:bg-white/10 hover:text-white transition-colors">Reviews</a></li>
         <li><a href="#location" class="block rounded-lg px-3 py-2.5 hover:bg-white/10 hover:text-white transition-colors">Location</a></li>
         <li class="pt-2">
@@ -551,6 +553,44 @@
           </a>
         </div>
       </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- OUR WORK / GALLERY SECTION                                     -->
+    <!-- ============================================================= -->
+    <section id="work" class="py-20 sm:py-24 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center">
+          <span class="text-sm font-bold uppercase tracking-wider text-orange">Our work</span>
+          <h2 class="mt-3 font-heading text-3xl sm:text-4xl font-extrabold text-brand">Real jobs from our workshop</h2>
+          <p class="mt-4 text-lg text-slate-600">A look at some of the servicing and repairs we handle every day.</p>
+        </div>
+        <div id="work-grid" class="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4"></div>
+      </div>
+      <script>
+        (function () {
+          var BASE = 'assets/services/';
+          var WORK = [
+            ['aircond.jpg', 'Aircond servicing & recharge'],
+            ['aircond-compressor.jpg', 'Aircond compressor replacement'],
+            ['brakes.jpg', 'Brake disc & pad replacement'],
+            ['timing-belt.jpg', 'Timing belt & major service'],
+            ['drive-belt-tensioner.jpg', 'Drive belt & tensioner'],
+            ['drive-shaft.jpg', 'Drive shaft replacement'],
+            ['suspension.jpg', 'Shock absorber replacement'],
+            ['suspension-steering.jpg', 'Suspension & steering overhaul'],
+            ['steering-rack.jpg', 'Steering rack replacement'],
+            ['towing.jpg', 'Towing & workshop transport']
+          ];
+          var grid = document.getElementById('work-grid');
+          if (grid) grid.innerHTML = WORK.map(function (w) {
+            return '<figure class="group relative overflow-hidden rounded-2xl ring-1 ring-slate-200 shadow-sm">'
+              + '<img src="' + BASE + w[0] + '" alt="' + w[1] + '" loading="lazy" class="aspect-[3/4] w-full object-cover transition-transform duration-500 group-hover:scale-105">'
+              + '<figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-3 pt-10 text-xs font-semibold leading-snug text-white">' + w[1] + '</figcaption>'
+              + '</figure>';
+          }).join('');
+        })();
+      </script>
     </section>
 
     <!-- ============================================================= -->

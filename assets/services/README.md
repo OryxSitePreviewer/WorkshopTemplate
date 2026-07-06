@@ -13,4 +13,12 @@ Optimised JPGs (~1200px wide). Placement into the site is pending (batch 2 to co
 | `drive-shaft.jpg` | Perodua Myvi on lift, drive shaft & absorbers | Suspension / Servicing |
 
 ## Batch 2
-_To be added._
+| File | Shows | Service |
+|------|-------|---------|
+| `suspension.jpg` | Perodua Myvi, KYB RS Ultra absorbers | Suspension |
+| `suspension-steering.jpg` | Proton, KYB Excel-G absorbers & rack end | Suspension & steering |
+| `steering-rack.jpg` | Perodua on lift, steering rack | Steering |
+| `aircond-compressor.jpg` | Toyota Estima, aircond compressor | Aircond Specialist |
+| `towing.jpg` | Proton on flatbed tow truck | Towing / transport |
+
+All 10 photos are wired into the **"Our Work"** gallery section on every version (root, v1, v2, v3), with captions that translate to Malay.

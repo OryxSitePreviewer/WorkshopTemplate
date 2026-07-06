@@ -173,6 +173,22 @@
     'Read our reviews on Google': 'Baca review kami kat Google',
     'Read reviews on Google': 'Baca review kat Google',
 
+    // Our work / gallery
+    'Our Work': 'Kerja Kami',
+    'Our work': 'Kerja kami',
+    'Real jobs from our workshop': 'Kerja sebenar dari bengkel kami',
+    'A look at some of the servicing and repairs we handle every day.': 'Lihat sebahagian servis dan repair yang kami buat setiap hari.',
+    'Aircond servicing & recharge': 'Servis & isi gas aircond',
+    'Aircond compressor replacement': 'Tukar compressor aircond',
+    'Brake disc & pad replacement': 'Tukar disc brake & pad',
+    'Timing belt & major service': 'Timing belt & servis major',
+    'Drive belt & tensioner': 'Drive belt & tensioner',
+    'Drive shaft replacement': 'Tukar drive shaft',
+    'Shock absorber replacement': 'Tukar shock absorber',
+    'Suspension & steering overhaul': 'Overhaul suspension & steering',
+    'Steering rack replacement': 'Tukar steering rack',
+    'Towing & workshop transport': 'Towing & angkut ke bengkel',
+
     // Contact
     'Find us': 'Cari kami',
     'Visit our workshop': 'Datang ke bengkel kami',
