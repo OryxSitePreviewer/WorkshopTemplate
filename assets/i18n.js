@@ -208,7 +208,7 @@
     'Sunday': 'Ahad',
     'Closed': 'Tutup',
     'Hours shown are a guide. Please confirm public-holiday hours on WhatsApp.': 'Waktu ni panduan je. Sila sahkan waktu cuti umum melalui WhatsApp.',
-    'Monday to Saturday, 9:00 AM to 6:30 PM. Sunday closed.': 'Isnin hingga Sabtu, 9:00 pagi hingga 6:30 petang. Ahad tutup.',
+    'Monday to Saturday, 9:30 AM to 6:00 PM. Sunday closed.': 'Isnin hingga Sabtu, 9:30 pagi hingga 6:00 petang. Ahad tutup.',
     'Hours are a guide, please confirm public holidays on WhatsApp.': 'Waktu ni panduan je, sila sahkan cuti umum melalui WhatsApp.',
     'A guide, please confirm public holidays on WhatsApp.': 'Panduan je, sila sahkan cuti umum melalui WhatsApp.',
 
@@ -268,43 +268,37 @@
   function init() {
     collect();
 
-    // ---- Floating controls (excluded from translation via .mds-ui) ----
-    var wrap = document.createElement('div');
-    wrap.className = 'mds-ui';
-    wrap.style.cssText = 'position:fixed;left:20px;bottom:20px;z-index:50;display:flex;flex-direction:column;gap:10px;align-items:flex-start;';
-
-    var btnCss = 'display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;border-radius:9999px;background:#14151A;color:#fff;font:600 14px Inter,system-ui,sans-serif;box-shadow:0 10px 28px rgba(0,0,0,.28);cursor:pointer;border:1px solid rgba(255,255,255,.14);transition:background .2s;';
-
-    // Back to top
+    // ---- Back-to-top button: fixed bottom-right, above the WhatsApp FAB ----
     var top = document.createElement('button');
     top.type = 'button';
     top.className = 'mds-ui';
     top.setAttribute('aria-label', 'Back to top');
-    top.style.cssText = btnCss + 'width:44px;padding:0;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s, transform .25s, background .2s;';
+    top.style.cssText = 'position:fixed;right:20px;bottom:88px;z-index:50;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:9999px;background:#14151A;color:#fff;box-shadow:0 10px 28px rgba(0,0,0,.28);cursor:pointer;border:1px solid rgba(255,255,255,.14);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s, transform .25s, background .2s;';
     top.innerHTML = '<i class="fa-solid fa-arrow-up" aria-hidden="true"></i>';
     top.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
     top.addEventListener('mouseenter', function () { top.style.background = '#F26F21'; });
     top.addEventListener('mouseleave', function () { top.style.background = '#14151A'; });
+    document.body.appendChild(top);
 
-    // Language switch
-    var lang = document.createElement('button');
-    lang.type = 'button';
-    lang.className = 'mds-ui';
-    lang.setAttribute('aria-label', 'Switch language');
-    lang.style.cssText = btnCss + 'padding:0 16px;';
-    lang.innerHTML = '<i class="fa-solid fa-globe" style="color:#F26F21" aria-hidden="true"></i><span id="mds-lang-label">BM</span>';
-    lang.addEventListener('mouseenter', function () { lang.style.background = '#F26F21'; });
-    lang.addEventListener('mouseleave', function () { lang.style.background = '#14151A'; });
+    // ---- Language switch: prefer the in-header button (#lang-toggle, top-right);
+    //      fall back to a floating top-right pill if the page has no header button ----
+    var lang = document.getElementById('lang-toggle');
+    if (!lang) {
+      lang = document.createElement('button');
+      lang.type = 'button';
+      lang.className = 'mds-ui';
+      lang.setAttribute('aria-label', 'Switch language');
+      lang.style.cssText = 'position:fixed;right:20px;top:16px;z-index:60;display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 14px;border-radius:9999px;background:#14151A;color:#fff;font:600 14px Inter,system-ui,sans-serif;box-shadow:0 10px 28px rgba(0,0,0,.28);cursor:pointer;border:1px solid rgba(255,255,255,.14);';
+      lang.innerHTML = '<i class="fa-solid fa-globe" style="color:#F26F21" aria-hidden="true"></i><span id="mds-lang-label">BM</span>';
+      document.body.appendChild(lang);
+    }
+    var label = lang.querySelector('#mds-lang-label') || lang;
 
-    wrap.appendChild(top);
-    wrap.appendChild(lang);
-    document.body.appendChild(wrap);
-
-    var label = lang.querySelector('#mds-lang-label');
-    var current = localStorage.getItem('mdsLang') || 'en';
+    // English is the default. Key is versioned so any older saved choice resets to English.
+    var current = localStorage.getItem('mdsLangPref') || 'en';
     function setLang(l) {
       current = l;
-      localStorage.setItem('mdsLang', l);
+      localStorage.setItem('mdsLangPref', l);
       apply(l);
       label.textContent = (l === 'en') ? 'BM' : 'ENG';
     }
