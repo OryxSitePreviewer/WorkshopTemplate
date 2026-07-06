@@ -10,5 +10,16 @@ Official website for **MDS Autowork**, a trusted car repair & maintenance worksh
 ## Live site
 https://netheraug.github.io/mds-autowork/
 
+## Design versions
+Three separate design directions, each a standalone page (pick a favourite; the root is the current live build):
+
+| Version | Direction | Live link |
+|---------|-----------|-----------|
+| **Root / v1** | Corporate Clean — graphite + orange, Montserrat, card grid | https://netheraug.github.io/mds-autowork/ · [/v1/](https://netheraug.github.io/mds-autowork/v1/) |
+| **v2** | Editorial Bright — warm light, Sora display type, numbered service list | https://netheraug.github.io/mds-autowork/v2/ |
+| **v3** | Midnight Pro — dark theme, glowing accents, scroll progress, animated reveals | https://netheraug.github.io/mds-autowork/v3/ |
+
+All three share identical business content. `v2` and `v3` reuse the root `assets/` images (add `assets/storefront.jpg`); `v1` uses its own `v1/assets/`.
+
 ## Tech
-Single-page static site — Tailwind (CDN), FontAwesome, Google Fonts. No build step; just open `index.html`.
+Single-page static sites — Tailwind (CDN), FontAwesome, Google Fonts. No build step; just open `index.html`.

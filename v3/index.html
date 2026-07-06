@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>MDS Autowork | Bengkel Kereta Kajang | Car Service, Aircond &amp; Engine Repair</title>
+  <meta name="description" content="MDS Autowork (Bengkel Kereta Kajang): trusted car servicing, aircond specialist, diagnosis & engine/transmission overhaul in Taman Kajang Utama, Selangor. Original parts, fair prices, free home pickup. Rated 4.9★ on Google. WhatsApp 019-939 9006." />
+  <meta name="theme-color" content="#0E0F13" />
+
+  <meta property="og:title" content="MDS Autowork | Bengkel Kereta Kajang" />
+  <meta property="og:description" content="Trusted car service, aircond, diagnosis & engine overhaul. Original parts, fair prices, free home pickup. Rated 4.9★ on Google." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='24'%20fill='%230E0F13'/%3E%3Crect%20x='4'%20y='4'%20width='92'%20height='92'%20rx='20'%20fill='none'%20stroke='%23F26F21'%20stroke-width='4'/%3E%3Ctext%20x='50'%20y='63'%20font-family='Arial,sans-serif'%20font-size='30'%20font-weight='bold'%20fill='%23F26F21'%20text-anchor='middle'%3EMDS%3C/text%3E%3C/svg%3E" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!--
+    MDS Autowork — VERSION 3 "Midnight Pro".
+    A premium dark, interactive take (distinct from v1 corporate & v2 editorial):
+      • Deep graphite background, glowing orange accents, gradient headline
+      • Scroll-progress bar, hero cursor glow, reveal-on-scroll
+      • Glassy cards with rings/backdrop blur, Space Grotesk display type
+  -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            night:  { DEFAULT: '#0E0F13', 800: '#14161B', 700: '#1B1E25', 600: '#252932' },
+            orange: { DEFAULT: '#F26F21', dark: '#D85A12', light: '#FF8A45' },
+            gold:   { DEFAULT: '#F5A623' },
+            wa:     { DEFAULT: '#16A34A', dark: '#15803D', brand: '#25D366' },
+          },
+          fontFamily: {
+            display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+            body:    ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; background:#0E0F13; }
+    h1,h2,h3,h4,.font-display { font-family: 'Space Grotesk', system-ui, sans-serif; }
+    section[id] { scroll-margin-top: 5.5rem; }
+    .grad-text { background: linear-gradient(100deg,#FF8A45,#F26F21 55%,#F5A623); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    #scroll-progress { position:fixed; top:0; left:0; height:3px; width:0%; z-index:60; background:linear-gradient(90deg,#F26F21,#F5A623); transition:width .1s linear; }
+    /* hero cursor glow follows pointer */
+    .hero-glow { background: radial-gradient(320px circle at var(--mx,50%) var(--my,30%), rgba(242,111,33,.18), transparent 60%); }
+    .grid-lines { background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size: 44px 44px; }
+    .storefront { background-color:#1B1E25; background-image: linear-gradient(to top, rgba(14,15,19,.9), rgba(14,15,19,.15)), url('../assets/storefront.jpg'); background-size:cover; background-position:center; }
+    .reveal { opacity:0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.in { opacity:1; transform:none; }
+    @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} .reveal{opacity:1;transform:none;transition:none;} *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;} }
+    @keyframes fab-pulse { 0%{box-shadow:0 0 0 0 rgba(37,211,102,.55);} 70%{box-shadow:0 0 0 16px rgba(37,211,102,0);} 100%{box-shadow:0 0 0 0 rgba(37,211,102,0);} }
+    .fab-pulse { animation: fab-pulse 2.2s infinite; }
+  </style>
+</head>
+
+<body class="bg-night text-slate-300 antialiased selection:bg-orange selection:text-white">
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <a href="#hero" class="sr-only focus:not-sr-only focus:absolute focus:z-[70] focus:top-3 focus:left-3 focus:bg-white focus:text-night focus:px-4 focus:py-2 focus:rounded-lg">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-night/80 backdrop-blur border-b border-white/5">
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Primary">
+      <div class="flex h-16 sm:h-20 items-center justify-between">
+        <a href="#hero" class="flex items-center gap-3 text-white" aria-label="MDS Autowork home">
+          <span class="grid place-items-center h-11 w-11 rounded-xl ring-2 ring-orange text-orange font-display font-bold">MDS</span>
+          <span class="leading-tight"><span class="block font-display font-bold text-lg sm:text-xl tracking-tight">MDS Autowork</span><span class="block text-[11px] sm:text-xs text-slate-400 -mt-0.5">Bengkel Kereta &middot; Kajang</span></span>
+        </a>
+        <ul class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-400">
+          <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+          <li><a href="#why" class="hover:text-white transition-colors">Why Us</a></li>
+          <li><a href="#pickup" class="hover:text-white transition-colors">Free Pickup</a></li>
+          <li><a href="#reviews" class="hover:text-white transition-colors">Reviews</a></li>
+          <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+        </ul>
+        <div class="flex items-center gap-2">
+          <a href="https://wa.me/60199399006?text=Hi%20MDS%20Autowork,%20I%20would%20like%20to%20book%20an%20appointment%20for%20my%20car" target="_blank" rel="noopener noreferrer"
+             class="hidden sm:inline-flex items-center gap-2 rounded-full bg-orange px-4 py-2.5 text-sm font-bold text-white shadow-lg shadow-orange/25 hover:bg-orange-dark transition-colors">
+            <i class="fa-brands fa-whatsapp text-base" aria-hidden="true"></i> Book Now
+          </a>
+          <button id="menu-toggle" type="button" class="lg:hidden grid place-items-center h-11 w-11 rounded-xl text-white hover:bg-white/10 transition-colors" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"><i id="menu-icon" class="fa-solid fa-bars text-xl" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="lg:hidden hidden border-t border-white/5 bg-night">
+      <ul class="space-y-1 px-4 py-4 text-base font-semibold text-slate-300">
+        <li><a href="#services" class="block rounded-lg px-3 py-2.5 hover:bg-white/10 hover:text-white">Services</a></li>
+        <li><a href="#why" class="block rounded-lg px-3 py-2.5 hover:bg-white/10 hover:text-white">Why Us</a></li>
+        <li><a href="#pickup" class="block rounded-lg px-3 py-2.5 hover:bg-white/10 hover:text-white">Free Pickup</a></li>
+        <li><a href="#reviews" class="block rounded-lg px-3 py-2.5 hover:bg-white/10 hover:text-white">Reviews</a></li>
+        <li><a href="#contact" class="block rounded-lg px-3 py-2.5 hover:bg-white/10 hover:text-white">Contact</a></li>
+        <li class="pt-2"><a href="https://wa.me/60199399006?text=Hi%20MDS%20Autowork,%20I%20would%20like%20to%20book%20an%20appointment%20for%20my%20car" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 rounded-full bg-orange px-4 py-3 font-bold text-white"><i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i> Book on WhatsApp</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="relative overflow-hidden">
+      <div class="absolute inset-0 grid-lines" aria-hidden="true"></div>
+      <div id="hero-glow" class="absolute inset-0 hero-glow" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32">
+        <div class="max-w-3xl">
+          <p class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm font-semibold text-slate-200">
+            <span class="h-2 w-2 rounded-full bg-wa-brand animate-pulse"></span> Open &middot; Taman Kajang Utama, Selangor
+          </p>
+          <h1 class="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.02] tracking-tight text-white">
+            Precision car care, <span class="grad-text">done right.</span>
+          </h1>
+          <p class="mt-6 text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl">
+            Servicing, aircond, diagnosis and engine work by mechanics with 8+ years of experience.
+            Original parts, fair prices, and free home pickup. Trusted since 2020.
+          </p>
+          <div class="mt-4 flex items-center gap-2">
+            <span class="text-gold text-lg" role="img" aria-label="Rated 4.9 out of 5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span>
+            <span class="text-sm font-semibold text-slate-200">4.9 on Google</span>
+          </div>
+          <div class="mt-9 flex flex-col sm:flex-row gap-4">
+            <a href="https://wa.me/60199399006?text=Hi%20MDS%20Autowork,%20I%20would%20like%20to%20book%20an%20appointment%20for%20my%20car" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-2 rounded-full bg-orange px-7 py-4 text-base font-bold text-white shadow-lg shadow-orange/30 hover:bg-orange-dark transition-colors">
+              <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i> Book on WhatsApp
+            </a>
+            <a href="#services" class="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-4 text-base font-bold text-white hover:bg-white/10 transition-colors">
+              <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Our Services
+            </a>
+          </div>
+          <p class="mt-5 text-sm text-slate-400">Prefer to call? <a href="tel:+60199399006" class="font-bold text-white underline decoration-orange decoration-2 underline-offset-4 hover:text-orange transition-colors">019-939 9006</a></p>
+        </div>
+
+        <!-- floating stat chips -->
+        <div class="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl">
+          <div class="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur"><p class="font-display text-2xl font-bold text-white">4.9<span class="text-gold">★</span></p><p class="text-xs text-slate-400 mt-0.5">Google rating</p></div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur"><p class="font-display text-2xl font-bold text-white">8+</p><p class="text-xs text-slate-400 mt-0.5">Years experience</p></div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur"><p class="font-display text-2xl font-bold text-white">2020</p><p class="text-xs text-slate-400 mt-0.5">Trusted since</p></div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur"><p class="font-display text-2xl font-bold text-white">Free</p><p class="text-xs text-slate-400 mt-0.5">Home pickup</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-20 sm:py-24 border-t border-white/5">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl reveal">
+          <p class="text-sm font-bold uppercase tracking-widest text-orange">What we do</p>
+          <h2 class="mt-2 font-display text-4xl sm:text-5xl font-bold tracking-tight text-white">Complete car care</h2>
+          <p class="mt-4 text-lg text-slate-400">Quick service or major overhaul, our team keeps you safely on the road, for all makes and models.</p>
+        </div>
+        <div class="mt-12 grid gap-5 sm:grid-cols-2">
+          <article class="reveal group rounded-3xl border border-white/10 bg-night-800 p-8 hover:border-orange/50 hover:bg-night-700 transition-colors">
+            <span class="grid place-items-center h-14 w-14 rounded-2xl bg-orange/15 text-orange group-hover:bg-orange group-hover:text-white transition-colors"><i class="fa-solid fa-oil-can text-2xl" aria-hidden="true"></i></span>
+            <h3 class="mt-5 font-display text-2xl font-bold text-white">Minor &amp; Major Servicing</h3>
+            <p class="mt-2 text-slate-400">Scheduled maintenance to keep your car smooth and reliable. Oil and filter, brakes, belts, batteries, and a full multi-point safety check.</p>
+          </article>
+          <article class="reveal group rounded-3xl border border-white/10 bg-night-800 p-8 hover:border-orange/50 hover:bg-night-700 transition-colors">
+            <span class="grid place-items-center h-14 w-14 rounded-2xl bg-orange/15 text-orange group-hover:bg-orange group-hover:text-white transition-colors"><i class="fa-solid fa-snowflake text-2xl" aria-hidden="true"></i></span>
+            <h3 class="mt-5 font-display text-2xl font-bold text-white">Aircond Specialist</h3>
+            <p class="mt-2 text-slate-400">We fix weak or warm air-conditioning at the root cause. Servicing and gas top-up, compressor and cooling coil repair, leak detection and odour treatment.</p>
+          </article>
+          <article class="reveal group rounded-3xl border border-white/10 bg-night-800 p-8 hover:border-orange/50 hover:bg-night-700 transition-colors">
+            <span class="grid place-items-center h-14 w-14 rounded-2xl bg-orange/15 text-orange group-hover:bg-orange group-hover:text-white transition-colors"><i class="fa-solid fa-gauge-high text-2xl" aria-hidden="true"></i></span>
+            <h3 class="mt-5 font-display text-2xl font-bold text-white">Vehicle Diagnosis &amp; Inspection</h3>
+            <p class="mt-2 text-slate-400">Computerised scanning to pinpoint the real problem fast. No guesswork. Warning-light scanning, pre-purchase inspection, and an honest report before any work.</p>
+          </article>
+          <article class="reveal group rounded-3xl border border-white/10 bg-night-800 p-8 hover:border-orange/50 hover:bg-night-700 transition-colors">
+            <span class="grid place-items-center h-14 w-14 rounded-2xl bg-orange/15 text-orange group-hover:bg-orange group-hover:text-white transition-colors"><i class="fa-solid fa-gears text-2xl" aria-hidden="true"></i></span>
+            <h3 class="mt-5 font-display text-2xl font-bold text-white">Transmission &amp; Engine Overhaul</h3>
+            <p class="mt-2 text-slate-400">Major repair work by mechanics who have done it for years, restoring power and reliability. Engine rebuild, auto and manual transmission, original parts.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US + storefront -->
+    <section id="why" class="py-20 sm:py-24 border-t border-white/5">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="reveal">
+          <div class="storefront aspect-[4/3] w-full rounded-3xl ring-1 ring-white/10 shadow-2xl"></div>
+        </div>
+        <div class="reveal">
+          <p class="text-sm font-bold uppercase tracking-widest text-orange">Why choose us</p>
+          <h2 class="mt-2 font-display text-4xl sm:text-5xl font-bold tracking-tight text-white">Straight talk. Solid work.</h2>
+          <p class="mt-4 text-lg text-slate-400">Serving drivers across Selangor since 2020. We treat every vehicle as if it were our own.</p>
+          <ul class="mt-8 space-y-4">
+            <li class="flex items-start gap-4"><span class="grid place-items-center h-10 w-10 shrink-0 rounded-xl bg-orange/15 text-orange"><i class="fa-solid fa-user-gear" aria-hidden="true"></i></span><span><span class="block font-semibold text-white">8+ years of experience</span><span class="text-slate-400">Seasoned mechanics, from quick jobs to major overhauls.</span></span></li>
+            <li class="flex items-start gap-4"><span class="grid place-items-center h-10 w-10 shrink-0 rounded-xl bg-orange/15 text-orange"><i class="fa-solid fa-certificate" aria-hidden="true"></i></span><span><span class="block font-semibold text-white">Original &amp; quality parts</span><span class="text-slate-400">Parts that last. No cheap shortcuts.</span></span></li>
+            <li class="flex items-start gap-4"><span class="grid place-items-center h-10 w-10 shrink-0 rounded-xl bg-orange/15 text-orange"><i class="fa-solid fa-tags" aria-hidden="true"></i></span><span><span class="block font-semibold text-white">Reasonable, transparent pricing</span><span class="text-slate-400">Clear quotes up front. No surprises at the counter.</span></span></li>
+            <li class="flex items-start gap-4"><span class="grid place-items-center h-10 w-10 shrink-0 rounded-xl bg-orange/15 text-orange"><i class="fa-solid fa-truck-pickup" aria-hidden="true"></i></span><span><span class="block font-semibold text-white">Free home pickup</span><span class="text-slate-400">We collect your car from home, free of charge.</span></span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FREE PICKUP -->
+    <section id="pickup" class="py-20 sm:py-24 border-t border-white/5">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal rounded-[2.5rem] border border-orange/30 bg-gradient-to-br from-night-800 to-night p-8 sm:p-12 relative overflow-hidden">
+          <div class="absolute -top-20 -right-20 h-72 w-72 rounded-full bg-orange/20 blur-3xl" aria-hidden="true"></div>
+          <div class="relative grid lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <p class="text-sm font-bold uppercase tracking-widest text-orange">Free home pickup</p>
+              <h2 class="mt-2 font-display text-4xl sm:text-5xl font-bold text-white leading-tight">Too busy? We come to you.</h2>
+              <p class="mt-4 text-lg text-slate-300 max-w-xl">WhatsApp your location and preferred time. We collect your car, service it, and keep you updated until it is ready. No extra charge.</p>
+              <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                <a href="https://wa.me/60199399006?text=Hi%20MDS%20Autowork,%20I%20would%20like%20to%20arrange%20a%20FREE%20home%20pickup%20for%20my%20car" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full bg-wa px-7 py-4 text-base font-bold text-white shadow-lg hover:bg-wa-dark transition-colors"><i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i> Arrange a pickup</a>
+                <a href="tel:+60199399006" class="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-4 text-base font-bold text-white hover:bg-white/10 transition-colors"><i class="fa-solid fa-phone" aria-hidden="true"></i> 019-939 9006</a>
+              </div>
+            </div>
+            <ol class="relative border-l border-white/10 pl-8 space-y-7">
+              <li class="relative"><span class="absolute -left-[41px] grid place-items-center h-8 w-8 rounded-full bg-orange text-white font-display font-bold text-sm">1</span><span class="block font-semibold text-white">Message us on WhatsApp</span><span class="text-slate-400 text-sm">Tell us the problem, your address and a time.</span></li>
+              <li class="relative"><span class="absolute -left-[41px] grid place-items-center h-8 w-8 rounded-full bg-orange text-white font-display font-bold text-sm">2</span><span class="block font-semibold text-white">We collect your car, free</span><span class="text-slate-400 text-sm">Picked up at a time that suits you.</span></li>
+              <li class="relative"><span class="absolute -left-[41px] grid place-items-center h-8 w-8 rounded-full bg-orange text-white font-display font-bold text-sm">3</span><span class="block font-semibold text-white">Diagnose, quote, repair</span><span class="text-slate-400 text-sm">You approve a clear price before work begins.</span></li>
+              <li class="relative"><span class="absolute -left-[41px] grid place-items-center h-8 w-8 rounded-full bg-orange text-white font-display font-bold text-sm">4</span><span class="block font-semibold text-white">Car ready and returned</span><span class="text-slate-400 text-sm">We finish the job and let you know.</span></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="py-20 sm:py-24 border-t border-white/5">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center reveal">
+        <p class="text-sm font-bold uppercase tracking-widest text-orange">Kind words</p>
+        <h2 class="mt-2 font-display text-4xl sm:text-5xl font-bold tracking-tight text-white">Rated 4.9★ by our customers</h2>
+        <div id="reviews-carousel" class="mt-10" role="region" aria-roledescription="carousel" aria-label="Customer reviews">
+          <div class="relative min-h-[230px] rounded-3xl border border-white/10 bg-night-800 p-8 overflow-hidden" id="reviews-track"></div>
+          <div class="mt-5 flex justify-center gap-2" id="reviews-dots"></div>
+        </div>
+        <a href="https://www.google.com/maps/search/MDS+Autowork+Kajang" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-bold text-white hover:bg-white/10 transition-colors"><i class="fa-brands fa-google" aria-hidden="true"></i> Read reviews on Google</a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 sm:py-24 border-t border-white/5">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+        <div class="reveal">
+          <p class="text-sm font-bold uppercase tracking-widest text-orange">Find us</p>
+          <h2 class="mt-2 font-display text-4xl sm:text-5xl font-bold tracking-tight text-white">Visit the workshop</h2>
+          <ul class="mt-8 space-y-6">
+            <li class="flex items-start gap-4"><span class="grid place-items-center h-11 w-11 shrink-0 rounded-xl bg-orange/15 text-orange"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span><div><p class="font-semibold text-white">Address</p><address class="not-italic text-slate-400">10, Jalan Seksyen 1/17, Taman Kajang Utama, 43000 Kajang, Selangor</address><a href="https://www.google.com/maps/dir/?api=1&destination=10%20Jalan%20Seksyen%201%2F17%20Taman%20Kajang%20Utama%2043000%20Kajang%20Selangor" target="_blank" rel="noopener noreferrer" class="mt-1 inline-flex items-center gap-1.5 text-sm font-bold text-orange hover:text-orange-light"><i class="fa-solid fa-diamond-turn-right" aria-hidden="true"></i> Get directions</a></div></li>
+            <li class="flex items-start gap-4"><span class="grid place-items-center h-11 w-11 shrink-0 rounded-xl bg-orange/15 text-orange"><i class="fa-solid fa-phone" aria-hidden="true"></i></span><div><p class="font-semibold text-white">Phone &amp; WhatsApp</p><p class="text-slate-400"><a href="tel:+60199399006" class="hover:text-orange">019-939 9006</a></p><p class="text-sm text-slate-500">Appointments best made via WhatsApp.</p></div></li>
+            <li class="flex items-start gap-4"><span class="grid place-items-center h-11 w-11 shrink-0 rounded-xl bg-orange/15 text-orange"><i class="fa-solid fa-clock" aria-hidden="true"></i></span><div><p class="font-semibold text-white">Hours</p><p class="text-slate-400">Monday to Saturday, 9:00 AM to 6:30 PM. Sunday closed.</p><p class="text-sm text-slate-500">A guide, please confirm public holidays on WhatsApp.</p></div></li>
+            <li class="flex items-start gap-4"><span class="grid place-items-center h-11 w-11 shrink-0 rounded-xl bg-orange/15 text-orange"><i class="fa-solid fa-share-nodes" aria-hidden="true"></i></span><div><p class="font-semibold text-white">Follow us</p>
+              <div class="mt-2 flex items-center gap-3">
+                <a href="https://www.instagram.com/mdsautowork/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="grid place-items-center h-10 w-10 rounded-full bg-white/10 text-white hover:bg-orange transition-colors"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/mdsautowork" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="grid place-items-center h-10 w-10 rounded-full bg-white/10 text-white hover:bg-orange transition-colors"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://my.linkedin.com/in/mds-autowork-62aa772b8" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="grid place-items-center h-10 w-10 rounded-full bg-white/10 text-white hover:bg-orange transition-colors"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+              </div></div></li>
+          </ul>
+          <a href="https://wa.me/60199399006?text=Hi%20MDS%20Autowork,%20I%20would%20like%20to%20book%20an%20appointment%20for%20my%20car" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-wa px-6 py-3.5 text-base font-bold text-white shadow-lg hover:bg-wa-dark transition-colors"><i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i> Book on WhatsApp</a>
+        </div>
+        <div class="reveal rounded-3xl overflow-hidden ring-1 ring-white/10 min-h-[380px]">
+          <iframe title="Map to MDS Autowork" src="https://www.google.com/maps?q=10%20Jalan%20Seksyen%201%2F17%20Taman%20Kajang%20Utama%2043000%20Kajang%20Selangor&output=embed" width="100%" height="100%" style="border:0;min-height:380px;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/5">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid gap-8 md:grid-cols-3">
+        <div>
+          <div class="flex items-center gap-3 text-white">
+            <span class="grid place-items-center h-11 w-11 rounded-xl ring-2 ring-orange text-orange font-display font-bold">MDS</span>
+            <span><span class="block font-display font-bold text-lg leading-tight">MDS Autowork</span><span class="block text-sm text-slate-500">Bengkel Kereta Kajang</span></span>
+          </div>
+          <p class="mt-4 text-sm text-slate-400">Trusted car servicing, aircond, diagnosis and engine work in Taman Kajang Utama, serving Bangi, Semenyih and the surrounding Selangor areas since 2020.</p>
+          <div class="mt-4 flex items-center gap-3">
+            <a href="https://www.instagram.com/mdsautowork/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="grid place-items-center h-10 w-10 rounded-full bg-white/10 text-white hover:bg-orange transition-colors"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/mdsautowork" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="grid place-items-center h-10 w-10 rounded-full bg-white/10 text-white hover:bg-orange transition-colors"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://my.linkedin.com/in/mds-autowork-62aa772b8" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="grid place-items-center h-10 w-10 rounded-full bg-white/10 text-white hover:bg-orange transition-colors"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-display font-semibold text-white">Explore</h3>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="#services" class="hover:text-white">Services</a></li>
+            <li><a href="#why" class="hover:text-white">Why Us</a></li>
+            <li><a href="#pickup" class="hover:text-white">Free Home Pickup</a></li>
+            <li><a href="#reviews" class="hover:text-white">Reviews</a></li>
+            <li><a href="#contact" class="hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display font-semibold text-white">Get in touch</h3>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li class="flex items-start gap-3"><i class="fa-solid fa-location-dot mt-1 text-orange" aria-hidden="true"></i><span>10, Jalan Seksyen 1/17, Taman Kajang Utama, 43000 Kajang, Selangor</span></li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-orange" aria-hidden="true"></i><a href="tel:+60199399006" class="hover:text-white">019-939 9006</a></li>
+            <li class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-orange" aria-hidden="true"></i><a href="https://wa.me/60199399006" target="_blank" rel="noopener noreferrer" class="hover:text-white">Chat on WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-10 border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-slate-500">
+        <span>&copy; <span id="year"></span> MDS Autowork. All rights reserved.</span>
+        <span>Design v3 &middot; Midnight Pro</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/60199399006?text=Hi%20MDS%20Autowork,%20I%20would%20like%20to%20book%20an%20appointment%20for%20my%20car" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"
+     class="fab-pulse fixed bottom-5 right-5 z-50 grid place-items-center h-14 w-14 sm:h-16 sm:w-16 rounded-full bg-wa-brand text-white shadow-2xl hover:bg-[#1DA851] transition-colors">
+    <i class="fa-brands fa-whatsapp text-3xl sm:text-4xl" aria-hidden="true"></i>
+  </a>
+
+  <script>
+    // Mobile menu
+    const toggle=document.getElementById('menu-toggle'),menu=document.getElementById('mobile-menu'),icon=document.getElementById('menu-icon');
+    function closeMenu(){menu.classList.add('hidden');toggle.setAttribute('aria-expanded','false');icon.classList.replace('fa-xmark','fa-bars');}
+    toggle.addEventListener('click',()=>{const open=!menu.classList.contains('hidden');if(open){closeMenu();}else{menu.classList.remove('hidden');toggle.setAttribute('aria-expanded','true');icon.classList.replace('fa-bars','fa-xmark');}});
+    menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+    document.getElementById('year').textContent=new Date().getFullYear();
+
+    // Scroll progress bar
+    const bar=document.getElementById('scroll-progress');
+    addEventListener('scroll',()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight||1);bar.style.width=(p*100)+'%';},{passive:true});
+
+    // Hero cursor glow
+    const glow=document.getElementById('hero-glow'),hero=document.getElementById('hero');
+    hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();glow.style.setProperty('--mx',(e.clientX-r.left)+'px');glow.style.setProperty('--my',(e.clientY-r.top)+'px');});
+
+    // Reveal on scroll
+    const io=new IntersectionObserver((es)=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // Reviews carousel (5s). Samples: replace with real Google reviews.
+    (function(){
+      const REVIEWS=[
+        {q:'Honest workshop with fair prices. They explained exactly what my car needed before doing any work. Aircond is ice-cold again!',s:'Google review (sample)'},
+        {q:'Booked through WhatsApp and they picked up my car from home for free. Very convenient and the service was fast.',s:'Google review (sample)'},
+        {q:'Did a major service and used original parts. Reasonable price and the mechanics clearly know what they are doing.',s:'Google review (sample)'},
+        {q:'Trusted them with an engine problem other shops could not solve. Diagnosed it properly and fixed it right.',s:'Google review (sample)'},
+        {q:'Transmission was slipping badly. They overhauled it and now the car drives like new. No hidden charges.',s:'Google review (sample)'},
+        {q:'Fast and friendly service for my routine servicing. Sent me a clear quote on WhatsApp before starting.',s:'Google review (sample)'},
+        {q:'Been sending my car here since 2020. Always honest advice and they never push unnecessary repairs.',s:'Google review (sample)'},
+        {q:'Aircond stopped cooling and they fixed the compressor same day. Reasonable price and genuine parts. Puas hati!',s:'Google review (sample)'},
+      ];
+      const track=document.getElementById('reviews-track'),dotsWrap=document.getElementById('reviews-dots');
+      if(!track||!dotsWrap)return;
+      track.innerHTML=REVIEWS.map((r,i)=>`<figure class="absolute inset-0 p-8 flex flex-col items-center justify-center text-center transition-opacity duration-500 ${i===0?'opacity-100':'opacity-0'}" data-slide="${i}"><div class="text-gold text-xl mb-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><blockquote class="text-slate-200 text-lg leading-relaxed max-w-xl">&ldquo;${r.q}&rdquo;</blockquote><figcaption class="mt-4 text-sm font-semibold text-slate-400">${r.s}</figcaption></figure>`).join('');
+      dotsWrap.innerHTML=REVIEWS.map((_,i)=>`<button type="button" class="h-2.5 w-2.5 rounded-full transition-colors ${i===0?'bg-orange':'bg-white/20'}" data-dot="${i}" aria-label="Show review ${i+1}"></button>`).join('');
+      const slides=[...track.querySelectorAll('[data-slide]')],dots=[...dotsWrap.querySelectorAll('[data-dot]')];
+      let active=0,timer=null;const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function show(i){slides[active].classList.replace('opacity-100','opacity-0');dots[active].classList.replace('bg-orange','bg-white/20');active=i;slides[active].classList.replace('opacity-0','opacity-100');dots[active].classList.replace('bg-white/20','bg-orange');}
+      function next(){show((active+1)%slides.length);}
+      function start(){if(!reduced&&slides.length>1)timer=setInterval(next,5000);}
+      function stop(){clearInterval(timer);}
+      dots.forEach((d,i)=>d.addEventListener('click',()=>{stop();show(i);start();}));
+      const c=document.getElementById('reviews-carousel');
+      c.addEventListener('mouseenter',stop);c.addEventListener('mouseleave',start);c.addEventListener('focusin',stop);c.addEventListener('focusout',start);
+      start();
+    })();
+  </script>
+</body>
+</html>
