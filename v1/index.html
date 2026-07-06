@@ -564,7 +564,15 @@
           <p class="mt-4 text-lg text-slate-600">Drop by, call us, or message us on WhatsApp. We are easy to reach.</p>
         </div>
 
-        <div id="contact" class="mt-12 grid lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+        <!-- Storefront photo: appears automatically once assets/storefront.jpg is added; hidden if missing -->
+        <figure class="mt-12 overflow-hidden rounded-2xl shadow-sm ring-1 ring-slate-200">
+          <img src="assets/storefront.jpg"
+               alt="MDS Autowork storefront on Jalan Seksyen 1/17, Taman Kajang Utama"
+               loading="lazy" class="w-full h-64 sm:h-96 object-cover"
+               onerror="this.closest('figure').style.display='none'" />
+        </figure>
+
+        <div id="contact" class="mt-8 grid lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
 
           <!-- Contact details card -->
           <div class="rounded-2xl bg-white p-7 sm:p-9 shadow-sm ring-1 ring-slate-200">
@@ -898,5 +906,8 @@
       window.scrollTo(0, 0);
     });
   </script>
+
+  <!-- Shared UI: back-to-top button + English/Malay language switch -->
+  <script defer src="assets/i18n.js"></script>
 </body>
 </html>
