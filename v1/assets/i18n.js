@@ -25,11 +25,11 @@
 
     // Hero (root/v1)
     'Serving Kajang, Bangi, Semenyih & surrounding Selangor': 'Kawasan Kajang, Bangi, Semenyih & sekitar Selangor',
-    'Honest Car Service & Repair in Selangor': 'Pusat Servis & Membaiki Kereta yang Jujur di Selangor',
-    'From minor & major servicing to aircond, diagnosis and full engine overhauls, all handled by mechanics with': 'Daripada servis minor & major, penyelenggaraan aircond, diagnosis, sehinggalah overhaul enjin sepenuhnya, semuanya dikendalikan oleh mekanik yang mempunyai lebih',
-    '8+ years of hands-on experience': '8 tahun pengalaman praktikal',
-    ', using original parts.': ', menggunakan alat ganti tulen (ori).',
-    'Rated 4.9★ on Google.': 'Mendapat rating 4.9★ di Google.',
+    'Honest Car Service & Repair in Selangor': 'Pakar Servis & Membaiki Kereta',
+    'From minor & major servicing to aircond, diagnosis and full engine overhauls, all handled by mechanics with': 'Daripada servis minor & major, penyelenggaraan aircond, diagnosis, sehinggalah overhaul enjin, semuanya dikendalikan oleh mekanik yang',
+    '8+ years of hands-on experience': 'berpengalaman',
+    ', using original parts.': ', menggunakan alat ganti asli.',
+    'Rated 4.9★ on Google.': 'Dipercayai dengan rating 4.9★ di Google.',
     '4.9 · Google Reviews': '4.9 · Review Google',
     'Our Services': 'Servis Kami',
     'Prefer to call?': 'Nak call terus?',
