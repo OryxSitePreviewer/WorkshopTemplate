@@ -12,7 +12,7 @@
   <meta property="og:description" content="Trusted car service, aircond, diagnosis & engine overhaul. Original parts, fair prices, free home pickup. Rated 4.9★ on Google." />
   <meta property="og:type" content="website" />
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='24'%20fill='%230E0F13'/%3E%3Crect%20x='4'%20y='4'%20width='92'%20height='92'%20rx='20'%20fill='none'%20stroke='%23F26F21'%20stroke-width='4'/%3E%3Ctext%20x='50'%20y='63'%20font-family='Arial,sans-serif'%20font-size='30'%20font-weight='bold'%20fill='%23F26F21'%20text-anchor='middle'%3EMDS%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='24'%20fill='%230E0F13'/%3E%3Crect%20x='4'%20y='4'%20width='92'%20height='92'%20rx='20'%20fill='none'%20stroke='%23E01E26'%20stroke-width='4'/%3E%3Ctext%20x='50'%20y='63'%20font-family='Arial,sans-serif'%20font-size='30'%20font-weight='bold'%20fill='%23E01E26'%20text-anchor='middle'%3EMDS%3C/text%3E%3C/svg%3E" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -33,7 +33,7 @@
         extend: {
           colors: {
             night:  { DEFAULT: '#0E0F13', 800: '#14161B', 700: '#1B1E25', 600: '#252932' },
-            orange: { DEFAULT: '#F26F21', dark: '#D85A12', light: '#FF8A45' },
+            orange: { DEFAULT: '#E01E26', dark: '#B3151B', light: '#FF5A61' },
             gold:   { DEFAULT: '#F5A623' },
             wa:     { DEFAULT: '#16A34A', dark: '#15803D', brand: '#25D366' },
           },
@@ -50,10 +50,10 @@
     body { font-family: 'Inter', system-ui, sans-serif; background:#0E0F13; }
     h1,h2,h3,h4,.font-display { font-family: 'Space Grotesk', system-ui, sans-serif; }
     section[id] { scroll-margin-top: 5.5rem; }
-    .grad-text { background: linear-gradient(100deg,#FF8A45,#F26F21 55%,#F5A623); -webkit-background-clip:text; background-clip:text; color:transparent; }
-    #scroll-progress { position:fixed; top:0; left:0; height:3px; width:0%; z-index:60; background:linear-gradient(90deg,#F26F21,#F5A623); transition:width .1s linear; }
+    .grad-text { background: linear-gradient(100deg,#FF5A61,#E01E26 55%,#8F1015); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    #scroll-progress { position:fixed; top:0; left:0; height:3px; width:0%; z-index:60; background:linear-gradient(90deg,#E01E26,#FF5A61); transition:width .1s linear; }
     /* hero cursor glow follows pointer */
-    .hero-glow { background: radial-gradient(320px circle at var(--mx,50%) var(--my,30%), rgba(242,111,33,.18), transparent 60%); }
+    .hero-glow { background: radial-gradient(320px circle at var(--mx,50%) var(--my,30%), rgba(224,30,38,.20), transparent 60%); }
     .grid-lines { background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size: 44px 44px; }
     .storefront { background-color:#1B1E25; background-image: linear-gradient(to top, rgba(14,15,19,.9), rgba(14,15,19,.15)), url('../assets/storefront.jpg'); background-size:cover; background-position:center; }
     .reveal { opacity:0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
@@ -73,8 +73,8 @@
   <header class="sticky top-0 z-50 bg-night/80 backdrop-blur border-b border-white/5">
     <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Primary">
       <div class="flex h-16 sm:h-20 items-center justify-between">
-        <a href="#hero" class="flex items-center gap-3 text-white" aria-label="MDS Autowork home">
-          <span class="grid place-items-center h-11 w-11 rounded-xl ring-2 ring-orange text-orange font-display font-bold">MDS</span>
+        <a href="#hero" class="flex items-center gap-3 text-white" aria-label="MDS Autoworks home">
+          <img src="../assets/logo.png" alt="MDS Autoworks logo" class="h-12 w-auto shrink-0 rounded-lg ring-1 ring-white/10" />
           <span class="leading-tight"><span class="block font-display font-bold text-lg sm:text-xl tracking-tight">MDS Autowork</span><span class="block text-[11px] sm:text-xs text-slate-400 -mt-0.5">Bengkel Kereta &middot; Kajang</span></span>
         </a>
         <ul class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-400">
@@ -131,7 +131,7 @@
           </p>
           <div class="mt-4 flex items-center gap-2">
             <span class="text-gold text-lg" role="img" aria-label="Rated 4.9 out of 5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span>
-            <span class="text-sm font-semibold text-slate-200">4.9 on Google</span>
+            <span class="text-sm font-semibold text-slate-200">4.9 &middot; 86 Google reviews</span>
           </div>
           <div class="mt-9 flex flex-col sm:flex-row gap-4">
             <a href="https://wa.me/60199399006?text=Hi%20MDS%20Autowork,%20I%20would%20like%20to%20book%20an%20appointment%20for%20my%20car" target="_blank" rel="noopener noreferrer"
@@ -243,7 +243,7 @@
           <div class="relative min-h-[230px] rounded-3xl border border-white/10 bg-night-800 p-8 overflow-hidden" id="reviews-track"></div>
           <div class="mt-5 flex justify-center gap-2" id="reviews-dots"></div>
         </div>
-        <a href="https://www.google.com/maps/search/MDS+Autowork+Kajang" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-bold text-white hover:bg-white/10 transition-colors"><i class="fa-brands fa-google" aria-hidden="true"></i> Read reviews on Google</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=MDS%20Autowork%20Bengkel%20Kereta%20Kajang" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-bold text-white hover:bg-white/10 transition-colors"><i class="fa-brands fa-google" aria-hidden="true"></i> Read reviews on Google</a>
       </div>
     </section>
 
@@ -315,7 +315,7 @@
       <div class="grid gap-8 md:grid-cols-3">
         <div>
           <div class="flex items-center gap-3 text-white">
-            <span class="grid place-items-center h-11 w-11 rounded-xl ring-2 ring-orange text-orange font-display font-bold">MDS</span>
+            <img src="../assets/logo.png" alt="MDS Autoworks logo" class="h-14 w-auto shrink-0 rounded-lg ring-1 ring-white/10" />
             <span><span class="block font-display font-bold text-lg leading-tight">MDS Autowork</span><span class="block text-sm text-slate-500">Bengkel Kereta Kajang</span></span>
           </div>
           <p class="mt-4 text-sm text-slate-400">Trusted car servicing, aircond, diagnosis and engine work in Taman Kajang Utama, serving Bangi, Semenyih and the surrounding Selangor areas since 2020.</p>
@@ -345,7 +345,7 @@
         </div>
       </div>
       <div class="mt-10 border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-slate-500">
-        <span>&copy; <span id="year"></span> MDS Autowork. All rights reserved.</span>
+        <span>&copy; <span id="year"></span> MDS Autoworks (003068153-X). All rights reserved.</span>
         <span>Design v3 &middot; Midnight Pro</span>
       </div>
     </div>

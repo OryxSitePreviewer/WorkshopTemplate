@@ -170,6 +170,9 @@
     'Kind words': 'Kata-kata baik',
     'Rated 4.9★ by our customers': 'Dapat 4.9★ dari pelanggan kami',
     '4.9 / 5 on Google': '4.9 / 5 kat Google',
+    '4.9 · 86 Google reviews': '4.9 · 86 review Google',
+    '4.9 / 5 · 86 Google reviews': '4.9 / 5 · 86 review Google',
+    '4.9 · 86 Google reviews · Since 2020': '4.9 · 86 review Google · Sejak 2020',
     'Read our reviews on Google': 'Baca review kami kat Google',
     'Read reviews on Google': 'Baca review kat Google',
 
@@ -276,7 +279,7 @@
     top.style.cssText = 'position:fixed;right:20px;bottom:88px;z-index:50;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:9999px;background:#14151A;color:#fff;box-shadow:0 10px 28px rgba(0,0,0,.28);cursor:pointer;border:1px solid rgba(255,255,255,.14);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s, transform .25s, background .2s;';
     top.innerHTML = '<i class="fa-solid fa-arrow-up" aria-hidden="true"></i>';
     top.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
-    top.addEventListener('mouseenter', function () { top.style.background = '#F26F21'; });
+    top.addEventListener('mouseenter', function () { top.style.background = '#E01E26'; });
     top.addEventListener('mouseleave', function () { top.style.background = '#14151A'; });
     document.body.appendChild(top);
 
@@ -289,7 +292,7 @@
       lang.className = 'mds-ui';
       lang.setAttribute('aria-label', 'Switch language');
       lang.style.cssText = 'position:fixed;right:20px;top:16px;z-index:60;display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 14px;border-radius:9999px;background:#14151A;color:#fff;font:600 14px Inter,system-ui,sans-serif;box-shadow:0 10px 28px rgba(0,0,0,.28);cursor:pointer;border:1px solid rgba(255,255,255,.14);';
-      lang.innerHTML = '<i class="fa-solid fa-globe" style="color:#F26F21" aria-hidden="true"></i><span id="mds-lang-label">BM</span>';
+      lang.innerHTML = '<i class="fa-solid fa-globe" style="color:#E01E26" aria-hidden="true"></i><span id="mds-lang-label">BM</span>';
       document.body.appendChild(lang);
     }
     var label = lang.querySelector('#mds-lang-label') || lang;

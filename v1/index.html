@@ -17,7 +17,7 @@
   <meta property="og:image" content="assets/storefront-2.jpg" />
 
   <!-- Favicon: inline SVG of the MDS orange gear mark (no file needed) -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ccircle%20cx='50'%20cy='50'%20r='48'%20fill='%2316181D'/%3E%3Ccircle%20cx='50'%20cy='50'%20r='44'%20fill='none'%20stroke='%23F26F21'%20stroke-width='5'/%3E%3Ctext%20x='50'%20y='62'%20font-family='Arial,sans-serif'%20font-size='30'%20font-weight='bold'%20fill='%23F26F21'%20text-anchor='middle'%3EMDS%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ccircle%20cx='50'%20cy='50'%20r='48'%20fill='%2316181D'/%3E%3Ccircle%20cx='50'%20cy='50'%20r='44'%20fill='none'%20stroke='%23E01E26'%20stroke-width='5'/%3E%3Ctext%20x='50'%20y='62'%20font-family='Arial,sans-serif'%20font-size='30'%20font-weight='bold'%20fill='%23E01E26'%20text-anchor='middle'%3EMDS%3C/text%3E%3C/svg%3E" />
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -52,8 +52,8 @@
               light:   '#F7F7F8', // page background
             },
             orange: {
-              DEFAULT: '#F26F21', // workshop orange
-              dark:    '#D85A12', // hover state
+              DEFAULT: '#E01E26', // brand RED (from MDS Autoworks logo)
+              dark:    '#B3151B', // hover state
             },
             gold: {
               DEFAULT: '#F5A623', // star rating + highlights
@@ -140,13 +140,9 @@
     <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Primary navigation">
       <div class="flex h-16 sm:h-20 items-center justify-between">
 
-        <!-- Brand / logo (orange "MDS" gear mark) -->
-        <a href="#hero" class="flex items-center gap-3 text-white group" aria-label="MDS Autowork home">
-          <svg viewBox="0 0 100 100" class="h-11 w-11 shrink-0 drop-shadow" role="img" aria-label="MDS Autowork logo">
-            <circle cx="50" cy="50" r="48" fill="#0E0F13" />
-            <circle cx="50" cy="50" r="44" fill="none" stroke="#F26F21" stroke-width="4" />
-            <text x="50" y="60" font-family="Montserrat, Arial, sans-serif" font-size="26" font-weight="800" fill="#F26F21" text-anchor="middle">MDS</text>
-          </svg>
+        <!-- Brand / logo -->
+        <a href="#hero" class="flex items-center gap-3 text-white group" aria-label="MDS Autoworks home">
+          <img src="assets/logo.png" alt="MDS Autoworks logo" class="h-12 w-auto shrink-0 rounded-lg ring-1 ring-white/10" />
           <span class="leading-tight">
             <span class="block font-heading font-extrabold text-lg sm:text-xl tracking-tight">MDS Autowork</span>
             <span class="block text-[11px] sm:text-xs text-slate-300 -mt-0.5">Bengkel Kereta &middot; Kajang</span>
@@ -246,7 +242,7 @@
             <span class="text-gold text-xl" aria-hidden="true">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
             </span>
-            <span class="text-sm font-semibold text-slate-100">4.9 &middot; Google Reviews</span>
+            <span class="text-sm font-semibold text-slate-100">4.9 &middot; 86 Google reviews</span>
           </div>
 
           <!-- CTA buttons -->
@@ -537,7 +533,7 @@
             <span class="text-gold text-xl" role="img" aria-label="4.9 out of 5 stars">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
             </span>
-            <span class="font-semibold text-slate-600">4.9 / 5 on Google</span>
+            <span class="font-semibold text-slate-600">4.9 / 5 &middot; 86 Google reviews</span>
           </div>
         </div>
 
@@ -553,7 +549,7 @@
         </div>
 
         <div class="mt-8 text-center">
-          <a href="https://www.google.com/maps/search/MDS+Autowork+Kajang" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.google.com/maps/search/?api=1&query=MDS%20Autowork%20Bengkel%20Kereta%20Kajang" target="_blank" rel="noopener noreferrer"
              class="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3.5 text-base font-bold text-white shadow-lg hover:bg-brand-dark transition-colors duration-200 cursor-pointer">
             <i class="fa-brands fa-google" aria-hidden="true"></i> Read our reviews on Google
           </a>
@@ -739,11 +735,7 @@
         <!-- Brand -->
         <div>
           <div class="flex items-center gap-3 text-white">
-            <svg viewBox="0 0 100 100" class="h-11 w-11 shrink-0" role="img" aria-label="MDS Autowork logo">
-              <circle cx="50" cy="50" r="48" fill="#16181D" />
-              <circle cx="50" cy="50" r="44" fill="none" stroke="#F26F21" stroke-width="4" />
-              <text x="50" y="60" font-family="Montserrat, Arial, sans-serif" font-size="26" font-weight="800" fill="#F26F21" text-anchor="middle">MDS</text>
-            </svg>
+            <img src="assets/logo.png" alt="MDS Autoworks logo" class="h-14 w-auto shrink-0 rounded-lg ring-1 ring-white/10" />
             <span>
               <span class="block font-heading font-extrabold text-lg leading-tight">MDS Autowork</span>
               <span class="block text-sm text-slate-400">Bengkel Kereta Kajang</span>
@@ -753,7 +745,7 @@
           <p class="mt-3 text-sm leading-relaxed">Trusted car servicing, aircond, diagnosis and engine/transmission overhaul in Taman Kajang Utama, serving Bangi, Semenyih and the surrounding Selangor areas since 2020.</p>
           <div class="mt-4 flex items-center gap-2 text-gold" role="img" aria-label="Rated 4.9 out of 5 stars">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-            <span class="text-sm text-slate-300 ml-1">4.9 &middot; Google Reviews</span>
+            <span class="text-sm text-slate-300 ml-1">4.9 &middot; 86 Google reviews</span>
           </div>
 
           <!-- Social media -->
@@ -810,7 +802,7 @@
           </button>
         </div>
         <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-center text-sm text-slate-400">
-          <span>&copy; <span id="year"></span> MDS Autowork. All rights reserved.</span>
+          <span>&copy; <span id="year"></span> MDS Autoworks (003068153-X). All rights reserved.</span>
           <span>Bengkel Kereta Kajang &middot; Trusted since 2020</span>
         </div>
       </div>

@@ -6,13 +6,13 @@
 
   <title>MDS Autowork | Bengkel Kereta Kajang | Car Service, Aircond &amp; Engine Repair</title>
   <meta name="description" content="MDS Autowork (Bengkel Kereta Kajang): trusted car servicing, aircond specialist, diagnosis & engine/transmission overhaul in Taman Kajang Utama, Selangor. Original parts, fair prices, free home pickup. Rated 4.9★ on Google. WhatsApp 019-939 9006." />
-  <meta name="theme-color" content="#F26F21" />
+  <meta name="theme-color" content="#E01E26" />
 
   <meta property="og:title" content="MDS Autowork | Bengkel Kereta Kajang" />
   <meta property="og:description" content="Trusted car service, aircond, diagnosis & engine overhaul. Original parts, fair prices, free home pickup. Rated 4.9★ on Google." />
   <meta property="og:type" content="website" />
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='24'%20fill='%23F26F21'/%3E%3Ctext%20x='50'%20y='63'%20font-family='Arial,sans-serif'%20font-size='34'%20font-weight='bold'%20fill='%23fff'%20text-anchor='middle'%3EMDS%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='24'%20fill='%23E01E26'/%3E%3Ctext%20x='50'%20y='63'%20font-family='Arial,sans-serif'%20font-size='34'%20font-weight='bold'%20fill='%23fff'%20text-anchor='middle'%3EMDS%3C/text%3E%3C/svg%3E" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -35,7 +35,7 @@
           colors: {
             ink:    { DEFAULT: '#14151A', soft: '#3B3D47' },
             paper:  { DEFAULT: '#FFFFFF', warm: '#FAF6F1', warm2: '#F3ECE3' },
-            orange: { DEFAULT: '#F26F21', dark: '#D85A12', soft: '#FDE7D6' },
+            orange: { DEFAULT: '#E01E26', dark: '#B3151B', soft: '#FCE4E5' },
             gold:   { DEFAULT: '#F5A623' },
             wa:     { DEFAULT: '#16A34A', dark: '#15803D', brand: '#25D366' },
           },
@@ -61,10 +61,10 @@
     /* Framed storefront photo (shares the root /assets image); warm gradient fallback if absent */
     .storefront {
       background-color: #E9DFD3;
-      background-image: linear-gradient(135deg, rgba(242,111,33,.12), rgba(20,21,26,.04)), url('../assets/storefront-2.jpg');
+      background-image: linear-gradient(135deg, rgba(224,30,38,.14), rgba(20,21,26,.04)), url('../assets/storefront-2.jpg');
       background-size: cover; background-position: center;
     }
-    .u-underline { background: linear-gradient(transparent 62%, rgba(242,111,33,.35) 0); }
+    .u-underline { background: linear-gradient(transparent 62%, rgba(224,30,38,.32) 0); }
   </style>
 </head>
 
@@ -76,8 +76,8 @@
   <header id="site-header" class="sticky top-0 z-50 bg-paper-warm/80 backdrop-blur transition-shadow">
     <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Primary">
       <div class="flex h-16 sm:h-20 items-center justify-between">
-        <a href="#hero" class="flex items-center gap-3" aria-label="MDS Autowork home">
-          <span class="grid place-items-center h-11 w-11 rounded-2xl bg-orange text-white font-display font-extrabold text-lg shadow-sm">M</span>
+        <a href="#hero" class="flex items-center gap-3" aria-label="MDS Autoworks home">
+          <img src="../assets/logo.png" alt="MDS Autoworks logo" class="h-11 w-auto shrink-0 rounded-lg ring-1 ring-ink/10" />
           <span class="leading-tight">
             <span class="block font-display font-extrabold text-lg sm:text-xl tracking-tight">MDS Autowork</span>
             <span class="block text-[11px] sm:text-xs text-ink-soft -mt-0.5">Bengkel Kereta &middot; Kajang</span>
@@ -139,7 +139,7 @@
               <span class="text-gold text-lg" role="img" aria-label="Rated 4.9 out of 5">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
               </span>
-              <span class="text-sm font-semibold text-ink-soft">4.9 on Google &middot; Trusted since 2020</span>
+              <span class="text-sm font-semibold text-ink-soft">4.9 &middot; 86 Google reviews &middot; Since 2020</span>
             </div>
             <div class="mt-8 flex flex-col sm:flex-row gap-4">
               <a href="https://wa.me/60199399006?text=Hi%20MDS%20Autowork,%20I%20would%20like%20to%20book%20an%20appointment%20for%20my%20car" target="_blank" rel="noopener noreferrer"
@@ -295,7 +295,7 @@
           <div class="relative min-h-[220px] rounded-3xl bg-paper-warm ring-1 ring-ink/10 p-8 overflow-hidden" id="reviews-track"></div>
           <div class="mt-5 flex justify-center gap-2" id="reviews-dots"></div>
         </div>
-        <a href="https://www.google.com/maps/search/MDS+Autowork+Kajang" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex items-center gap-2 rounded-full border-2 border-ink px-6 py-3 text-sm font-bold hover:bg-ink hover:text-white transition-colors"><i class="fa-brands fa-google" aria-hidden="true"></i> Read reviews on Google</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=MDS%20Autowork%20Bengkel%20Kereta%20Kajang" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex items-center gap-2 rounded-full border-2 border-ink px-6 py-3 text-sm font-bold hover:bg-ink hover:text-white transition-colors"><i class="fa-brands fa-google" aria-hidden="true"></i> Read reviews on Google</a>
       </div>
     </section>
 
@@ -374,7 +374,7 @@
       <div class="grid gap-8 md:grid-cols-3">
         <div>
           <div class="flex items-center gap-3 text-white">
-            <span class="grid place-items-center h-11 w-11 rounded-2xl bg-orange font-display font-extrabold text-lg">M</span>
+            <img src="../assets/logo.png" alt="MDS Autoworks logo" class="h-14 w-auto shrink-0 rounded-lg ring-1 ring-white/10" />
             <span><span class="block font-display font-extrabold text-lg leading-tight">MDS Autowork</span><span class="block text-sm text-white/50">Bengkel Kereta Kajang</span></span>
           </div>
           <p class="mt-4 text-sm">Trusted car servicing, aircond, diagnosis and engine work in Taman Kajang Utama, serving Bangi, Semenyih and the surrounding Selangor areas since 2020.</p>
@@ -404,7 +404,7 @@
         </div>
       </div>
       <div class="mt-10 border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-white/50">
-        <span>&copy; <span id="year"></span> MDS Autowork. All rights reserved.</span>
+        <span>&copy; <span id="year"></span> MDS Autoworks (003068153-X). All rights reserved.</span>
         <span>Design v2 &middot; Editorial Bright</span>
       </div>
     </div>
