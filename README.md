@@ -16,9 +16,9 @@ Three standalone design directions (same content, different look). Pick a favour
 
 | Package | Folder / link | Look |
 |---------|---------------|------|
-| **Corporate Clean** | root · [/v1/](https://netheraug.github.io/mds-autowork/v1/) | Light, card grid, Montserrat |
-| **Editorial Bright** | [/v2/](https://netheraug.github.io/mds-autowork/v2/) | Warm light, Sora display type, numbered service list |
-| **Midnight Pro** | [/v3/](https://netheraug.github.io/mds-autowork/v3/) | Dark theme, glowing red accents, scroll progress, animated reveals |
+| **Corporate Clean** | root · [/v1/](https://netheraug.github.io/shelvesmds-autowork/v1/) | Light, card grid, Montserrat |
+| **Editorial Bright** | [/v2/](https://netheraug.github.io/shelvesmds-autowork/v2/) | Warm light, Sora display type, numbered service list |
+| **Midnight Pro** | [/v3/](https://netheraug.github.io/shelvesmds-autowork/v3/) | Dark theme, glowing red accents, scroll progress, animated reveals |
 
 `Editorial Bright` and `Midnight Pro` reuse the root `assets/`; `Corporate Clean`'s v1 copy uses its own `v1/assets/`.
 
