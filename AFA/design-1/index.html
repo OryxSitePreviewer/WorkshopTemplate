@@ -209,6 +209,18 @@
     .widget-slot .placeholder { color: rgba(255,255,255,.4); font-family: var(--head); text-transform: uppercase; letter-spacing: .14em; font-size: .78rem; }
     .widget-cta { text-align: center; margin-top: 2.25rem; }
     .widget-note { text-align: center; margin-top: 1rem; font-size: .72rem; color: rgba(255,255,255,.35); }
+    /* Working reviews carousel */
+    .gr-widget { width: 100%; }
+    .gr-track { position: relative; min-height: 220px; }
+    .gr-slide { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 1rem; opacity: 0; transform: translateY(10px); transition: opacity .5s ease, transform .5s ease; pointer-events: none; }
+    .gr-slide.active { opacity: 1; transform: none; pointer-events: auto; }
+    .gr-slide .gr-stars { color: var(--gold); letter-spacing: 3px; font-size: 1.1rem; margin-bottom: 1rem; }
+    .gr-slide .gr-text { color: var(--white); font-size: clamp(1rem, 2vw, 1.15rem); line-height: 1.6; max-width: 60ch; margin: 0 0 1.25rem; }
+    .gr-slide .gr-meta { font-family: var(--head); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--gold); }
+    .gr-slide .gr-meta small { display: block; font-family: var(--body); font-weight: 400; text-transform: none; letter-spacing: 0; font-size: .8rem; color: var(--muted); margin-top: .15rem; }
+    .gr-dots { display: flex; gap: .5rem; justify-content: center; margin-top: 1.5rem; }
+    .gr-dots button { width: 9px; height: 9px; padding: 0; border: 0; border-radius: 50%; background: rgba(255,255,255,.22); cursor: pointer; transition: background .2s, transform .2s; }
+    .gr-dots button.on { background: var(--gold); transform: scale(1.25); }
 
     /* ---------------- Parallax band ---------------- */
     .parallax {
@@ -426,23 +438,24 @@
         </div>
 
         <div class="widget-frame">
-          <div class="widget-slot">
-            <!-- ============================================================
-                 Google Review Widget Embed Code Here
-                 Paste the Elfsight (or similar) Google Reviews widget here,
-                 replacing the placeholder span below. For Elfsight this is
-                 usually a single div, e.g.:
-                   <div class="elfsight-app-XXXXXXXX-XXXX" data-elfsight-app-lazy></div>
-                 plus the Elfsight platform script in the page <head> or footer.
-                 ============================================================ -->
-            <span class="placeholder">Google Reviews widget loads here</span>
+          <!-- ============================================================
+               GOOGLE REVIEWS — working self-contained carousel.
+               Populated from the AFA_REVIEWS array in the script near </body>.
+               To show your LIVE Google feed instead, replace the .gr-widget
+               below with a third-party embed, e.g. Elfsight:
+                 <div class="elfsight-app-XXXXXXXX-XXXX" data-elfsight-app-lazy></div>
+               (+ its platform script), then remove the AFA_REVIEWS script.
+               ============================================================ -->
+          <div class="gr-widget" id="grWidget" role="region" aria-roledescription="carousel" aria-label="Customer reviews">
+            <div class="gr-track" id="grTrack"></div>
+            <div class="gr-dots" id="grDots"></div>
           </div>
         </div>
 
         <div class="widget-cta">
           <a href="https://www.google.com/search?q=AFA+Auto+Service+Kajang+Reviews" target="_blank" rel="noopener" class="btn btn-gold">Read Reviews on Google</a>
         </div>
-        <p class="widget-note">Reviews are pulled live from Google. This preview shows the wrapper until the widget key is added.</p>
+        <p class="widget-note">Sample reviews shown for layout. Connect your Elfsight or Trustindex embed to display the live Google feed.</p>
       </div>
     </section>
 
@@ -611,6 +624,47 @@
     links.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', function () { links.classList.remove('open'); t.setAttribute('aria-expanded', 'false'); });
     });
+  </script>
+
+  <!-- ===================== GOOGLE REVIEWS CAROUSEL ===================== -->
+  <script>
+    (function () {
+      // Sample reviews for layout. Replace with real Google reviews, or swap
+      // the .gr-widget markup for a live third-party embed (Elfsight/Trustindex).
+      var AFA_REVIEWS = [
+        { text: "Kereta accident teruk depan, tapi lepas repair nampak macam baru. Insurance claim pun AFA uruskan semua. Puas hati!", name: "Ahmad R.", meta: "Google Review" },
+        { text: "Fast and honest. They explained exactly what was needed and the paint match on my Myvi was flawless. Highly recommend.", name: "Nurul H.", meta: "Google Review" },
+        { text: "Panel beat and full repaint done in a few days. Reasonable price and the finish looks factory. Will come back.", name: "Daniel T.", meta: "Google Review" },
+        { text: "Windscreen claim settled without any hassle. Friendly staff, quick service. Terima kasih AFA.", name: "Siti A.", meta: "Google Review" },
+        { text: "Best body and paint workshop around Kajang. Booked in, insurance handled, car returned spotless. 5 stars.", name: "Faizal M.", meta: "Google Review" }
+      ];
+      var track = document.getElementById('grTrack');
+      var dots = document.getElementById('grDots');
+      if (!track || !dots) return;
+      AFA_REVIEWS.forEach(function (r, i) {
+        var s = document.createElement('div');
+        s.className = 'gr-slide' + (i === 0 ? ' active' : '');
+        s.innerHTML = '<div class="gr-stars" aria-label="5 out of 5 stars">★★★★★</div>' +
+                      '<p class="gr-text">“' + r.text + '”</p>' +
+                      '<div class="gr-meta">' + r.name + '<small>' + r.meta + '</small></div>';
+        track.appendChild(s);
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = (i === 0 ? 'on' : '');
+        b.setAttribute('aria-label', 'Show review ' + (i + 1));
+        b.addEventListener('click', function () { go(i); });
+        dots.appendChild(b);
+      });
+      var idx = 0, slides = track.children, btns = dots.children, timer;
+      function go(n) {
+        slides[idx].classList.remove('active'); btns[idx].classList.remove('on');
+        idx = (n + slides.length) % slides.length;
+        slides[idx].classList.add('active'); btns[idx].classList.add('on');
+        start();
+      }
+      function start() { clearInterval(timer); timer = setInterval(function () { go(idx + 1); }, 5000); }
+      start();
+    })();
   </script>
 </body>
 </html>
