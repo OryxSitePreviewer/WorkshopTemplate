@@ -620,6 +620,7 @@
     .header { background: rgba(10,10,10,0.92); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); border-bottom: 3px solid var(--accent); }
     .brand { color: var(--text); text-shadow: 0 0 14px rgba(255,30,30,0.35); }
     .brand-mark { background: var(--accent); box-shadow: 0 0 18px rgba(255,30,30,0.45); }
+    .brand-logo { height: 46px; width: auto; display: block; }
     .nav a { color: var(--text-soft); }
     .nav a:hover { color: var(--neon); }
     .nav.open { background: #0D0D0D; border-bottom-color: var(--accent); }
@@ -633,7 +634,7 @@
     .section-intro { color: var(--grey); }
 
     /* Hero — black with red glow + halftone dots */
-    .hero { background: linear-gradient(105deg, #0C0C0C 0%, #161616 100%); }
+    .hero { background: linear-gradient(105deg, rgba(12,12,12,0.90), rgba(20,20,20,0.70)), url("assets/afa-workshop.jpg") center/cover no-repeat; }
     .hero::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 20px 20px; opacity: 0.55; pointer-events: none; }
     .hero::after { background: var(--neon); opacity: 0.10; }
     .hero h1 .accent { color: var(--neon); text-shadow: 0 0 26px rgba(255,30,30,0.55); }
@@ -720,8 +721,7 @@
   <header class="header">
     <div class="container">
       <a href="/" class="brand" aria-label="AFA Auto Service, Home">
-        <span class="brand-mark">AFA</span>
-        <span>Auto Service</span>
+        <img src="assets/afa-logo.png" alt="AFA Auto Service" class="brand-logo" />
       </a>
 
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="navToggle">☰</button>
@@ -1024,6 +1024,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
+          <img src="assets/afa-logo.png" alt="AFA Auto Service" style="height:40px;width:auto;display:block;margin-bottom:1rem;" />
           <h4>AFA AUTO SERVICE SDN. BHD.</h4>
           <p style="margin: 0 0 1rem; max-width: 36ch;">5.0-rated collision and bodywork specialists. Official panel repairer for Etiqa, Etiqa Takaful &amp; Syarikat Takaful Malaysia.</p>
           <p style="font-size: 0.82rem; color: #7c848e; margin: 0;">
