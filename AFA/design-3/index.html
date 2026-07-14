@@ -154,6 +154,7 @@
     /* Language toggle */
     .lang-toggle { font-family: var(--heading); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.4rem 0.8rem; border-radius: 4px; border: 2px solid var(--accent); background: transparent; color: var(--neon); cursor: pointer; white-space: nowrap; transition: background 0.2s, color 0.2s; }
     .lang-toggle:hover { background: var(--accent); color: #fff; }
+    .brand-logo { height: 46px; width: auto; display: block; }
 
     @media (max-width: 900px) {
       .nav, .header-phone { display: none; }
@@ -641,7 +642,7 @@
     .section-eyebrow { color: var(--neon); }
     .section-intro { color: var(--grey); }
 
-    .hero { background: linear-gradient(105deg, #0C0C0C 0%, #161616 100%); }
+    .hero { background: linear-gradient(105deg, rgba(12,12,12,0.90), rgba(20,20,20,0.70)), url("assets/afa-workshop.jpg") center/cover no-repeat; }
     .hero::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 20px 20px; opacity: 0.55; pointer-events: none; }
     .hero::after { background: var(--neon); opacity: 0.10; }
     .hero h1 .accent { color: var(--neon); text-shadow: 0 0 26px rgba(255,30,30,0.55); }
@@ -717,8 +718,7 @@
   <header class="header">
     <div class="container">
       <a href="/" class="brand" aria-label="AFA Auto Service, Home">
-        <span class="brand-mark">AFA</span>
-        <span>Auto Service</span>
+        <img src="assets/afa-logo.png" alt="AFA Auto Service" class="brand-logo" />
       </a>
 
       <button id="langToggle" class="lang-toggle" type="button" aria-label="Tukar bahasa">EN</button>
@@ -1016,6 +1016,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
+          <img src="assets/afa-logo.png" alt="AFA Auto Service" style="height:40px;width:auto;display:block;margin-bottom:1rem;" />
           <h4>AFA AUTO SERVICE SDN. BHD.</h4>
           <p style="margin: 0 0 1rem; max-width: 36ch;">Pakar repair kemalangan dan cat kenderaan dengan rating 5.0 bintang. Bengkel panel rasmi untuk Etiqa, Etiqa Takaful, dan Syarikat Takaful Malaysia.</p>
           <p style="font-size: 0.82rem; color: #7c848e; margin: 0;">
