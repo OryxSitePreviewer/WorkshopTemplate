@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ms">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AFA Auto Service | Kajang's Trusted Collision & Bodywork Experts</title>
-  <meta name="description" content="#1 collision repair, bodywork and paintwork specialists. 5.0★ Google · Insurance handled · Free estimate." />
+  <title>AFA Auto Service | Pakar Collision & Bodywork Di Kajang</title>
+  <meta name="description" content="Pakar repair kemalangan, bodywork dan cat kereta. 5.0★ Google. Claim insurans diuruskan. Dapatkan free estimate." />
   <meta name="theme-color" content="#0A0A0A" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,28 +13,27 @@
 
   <style>
     /* ==========================================================
-       AFA · D3 · v1
+       AFA D3 (Bahasa Melayu default, EN toggle)
        Design direction: bold, trust-heavy, insurance/collision-first
-       Inspiration: 411collision.com — closest match to AFA's business
        ========================================================== */
 
     :root {
-      /* ===== Official AFA Auto Services palette (from banner) ===== */
+      /* ===== Official AFA Auto Services palette ===== */
       --bg:        #0A0A0A;      /* deep black base */
       --bg-2:      #121212;      /* raised dark surface */
       --bg-3:      #1A1A1A;      /* cards */
       --primary:   #141414;      /* dark blocks */
       --primary-mid:#1E1E1E;
-      --accent:    #9B111E;      /* AFA red — solid blocks / CTA / footer */
+      --accent:    #9B111E;      /* AFA red: solid blocks / CTA / footer */
       --accent-hover: #C0142A;
-      --neon:      #FF1E1E;      /* bright neon red — glow / hover / emphasis */
+      --neon:      #FF1E1E;      /* bright neon red: glow / hover / emphasis */
       --yellow:    #FF1E1E;      /* legacy alias -> neon red */
       --gold:      #FF1E1E;      /* legacy alias -> neon red (stars) */
       --grey:      #A9A9A9;      /* secondary text */
       --text:      #FFFFFF;      /* primary text / headings / numbers */
       --text-soft: #CCCCCC;      /* paragraph text */
       --dark:      #0A0A0A;      /* dark bg role */
-      --off-white: #121212;      /* was light section bg -> now dark surface */
+      --off-white: #121212;      /* dark surface */
       --line:      #2A2A2A;
 
       --heading: "Barlow Condensed", Impact, sans-serif;
@@ -52,7 +51,7 @@
       color: var(--text-soft);
       background: var(--bg);
       line-height: 1.6;
-      /* subtle red top glow + dot-matrix halftone (racing texture) */
+      /* subtle red top glow + dot-matrix halftone */
       background-image:
         radial-gradient(1200px 620px at 50% -12%, rgba(155,17,30,0.20), transparent 62%),
         radial-gradient(rgba(255,255,255,0.035) 1px, transparent 1px);
@@ -151,6 +150,11 @@
       font-size: 1.6rem; color: var(--primary);
       cursor: pointer;
     }
+
+    /* Language toggle */
+    .lang-toggle { font-family: var(--heading); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.4rem 0.8rem; border-radius: 4px; border: 2px solid var(--accent); background: transparent; color: var(--neon); cursor: pointer; white-space: nowrap; transition: background 0.2s, color 0.2s; }
+    .lang-toggle:hover { background: var(--accent); color: #fff; }
+
     @media (max-width: 900px) {
       .nav, .header-phone { display: none; }
       .nav.open {
@@ -239,7 +243,7 @@
       line-height: 1;
     }
 
-    /* ---------- Trust banner (directly under hero) ---------- */
+    /* ---------- Trust banner ---------- */
     .trust-banner {
       background: var(--dark);
       color: #fff;
@@ -467,6 +471,7 @@
       letter-spacing: 0.03em;
     }
     .review-card cite span { color: var(--accent); font-weight: 600; letter-spacing: 0; text-transform: none; display: block; font-size: 0.78rem; margin-top: 0.15rem; }
+
     /* Dynamic Google review widget wrapper */
     .widget-frame { position: relative; max-width: 1040px; margin: 3rem auto 0; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); padding: clamp(1.5rem, 4vw, 2.5rem); box-shadow: 0 24px 60px rgba(0,0,0,0.4); overflow: hidden; }
     .widget-frame::before { content: ""; position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: var(--accent); }
@@ -475,6 +480,7 @@
     .widget-slot .placeholder { color: rgba(255,255,255,0.45); font-family: var(--heading); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.9rem; }
     .widget-cta { text-align: center; margin-top: 2rem; }
     .widget-note { text-align: center; margin-top: 1rem; font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+
     /* Working reviews carousel */
     .gr-widget { width: 100%; }
     .gr-track { position: relative; min-height: 220px; }
@@ -605,22 +611,25 @@
       body { padding-bottom: 68px; }
     }
 
+    /* ---------- Back to top ---------- */
+    .back-to-top { position: fixed; right: 20px; bottom: 92px; width: 46px; height: 46px; border-radius: 50%; border: 0; cursor: pointer; z-index: 46; display: grid; place-items: center; font-size: 1.35rem; line-height: 1; background: var(--accent); color: #fff; box-shadow: 0 8px 20px rgba(0,0,0,0.45); opacity: 0; visibility: hidden; transform: translateY(10px); transition: opacity 0.25s, transform 0.25s, background 0.2s; }
+    .back-to-top:hover { background: var(--neon); }
+    .back-to-top.show { opacity: 1; visibility: visible; transform: none; }
+    @media (max-width: 780px) { .back-to-top { bottom: 156px; } }
+
     :focus-visible { outline: 3px solid var(--neon); outline-offset: 2px; }
     .skip { position: absolute; left: -9999px; }
     .skip:focus { left: 1rem; top: 1rem; background: #fff; padding: 0.5rem 1rem; z-index: 100; }
 
     /* ============================================================
-       AFA OFFICIAL BRAND OVERRIDES — dark + AFA red (v3)
-       Appended last so these win over the base light theme.
+       AFA OFFICIAL BRAND OVERRIDES
        ============================================================ */
     .topbar { background: #0D0D0D; color: var(--text-soft); border-bottom: 1px solid var(--line); }
     .emergency-strip { background: var(--accent); }
 
-    /* Header — dark, sleek, glass */
     .header { background: rgba(10,10,10,0.92); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); border-bottom: 3px solid var(--accent); }
     .brand { color: var(--text); text-shadow: 0 0 14px rgba(255,30,30,0.35); }
     .brand-mark { background: var(--accent); box-shadow: 0 0 18px rgba(255,30,30,0.45); }
-    .brand-logo { height: 46px; width: auto; display: block; }
     .nav a { color: var(--text-soft); }
     .nav a:hover { color: var(--neon); }
     .nav.open { background: #0D0D0D; border-bottom-color: var(--accent); }
@@ -628,29 +637,24 @@
     .header-phone .lbl { color: var(--grey); }
     .header-phone .num { color: var(--neon); text-shadow: 0 0 10px rgba(255,30,30,0.4); }
 
-    /* Headings / eyebrows / intros on dark */
     .section-title { color: var(--text); }
     .section-eyebrow { color: var(--neon); }
     .section-intro { color: var(--grey); }
 
-    /* Hero — black with red glow + halftone dots */
-    .hero { background: linear-gradient(105deg, rgba(12,12,12,0.90), rgba(20,20,20,0.70)), url("assets/afa-workshop.jpg") center/cover no-repeat; }
+    .hero { background: linear-gradient(105deg, #0C0C0C 0%, #161616 100%); }
     .hero::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 20px 20px; opacity: 0.55; pointer-events: none; }
     .hero::after { background: var(--neon); opacity: 0.10; }
     .hero h1 .accent { color: var(--neon); text-shadow: 0 0 26px rgba(255,30,30,0.55); }
     .hero .lead { color: var(--text-soft); }
     .hero-phone-big .icon { color: var(--neon); }
 
-    /* Trust banner — solid AFA red block */
     .trust-banner { background: var(--accent); }
     .trust-item .icon { background: rgba(0,0,0,0.28); color: #fff; }
     .trust-item p { color: rgba(255,255,255,0.85); }
 
-    /* Empathy */
     .empathy { background: var(--bg-2); border-top: 4px solid var(--accent); }
     .empathy p { color: var(--text-soft); }
 
-    /* Services */
     .service-card { background: linear-gradient(180deg, #171717, #0E0E0E); border: 1px solid var(--line); }
     .service-card .num { color: rgba(255,30,30,0.32); }
     .service-card h3 { color: var(--text); }
@@ -658,30 +662,24 @@
     .service-card:hover { box-shadow: 0 18px 42px rgba(155,17,30,0.28); }
     .service-card a { color: var(--neon); border-bottom-color: var(--neon); }
 
-    /* Makes */
     .makes { background: var(--bg); }
     .make-item { background: var(--bg-3); border-color: var(--line); color: var(--text); transition: border-color 0.15s, color 0.15s; }
     .make-item:hover { border-color: var(--neon); color: var(--neon); }
 
-    /* Work cards */
     .work-card { background: var(--bg-2); border-color: var(--line); }
     .work-info h4 { color: var(--text); }
 
-    /* Reviews band */
     .reviews-band { background: var(--bg-2); }
     .rating-big { color: var(--neon); text-shadow: 0 0 28px rgba(255,30,30,0.5); }
     .rating-hero .stars, .review-card .stars { color: var(--neon); }
 
-    /* Location — solid AFA red info block */
     .location-info { background: var(--accent); }
     .location-info .hours strong { color: #fff; }
     .location-info address, .location-info .hours p { color: rgba(255,255,255,0.9); }
     .location-wrap { border-color: var(--line); }
 
-    /* Footer — black with AFA red edge */
     .footer { background: #000; border-top: 3px solid var(--accent); }
 
-    /* Buttons */
     .btn-primary { background: var(--accent); }
     .btn-primary:hover { background: var(--neon); box-shadow: 0 0 24px rgba(255,30,30,0.5); transform: translateY(-2px); }
     .btn-white { background: #fff; color: #0A0A0A; }
@@ -689,11 +687,9 @@
     .btn-outline-dark { color: #fff; border-color: #fff; }
     .btn-outline-dark:hover { background: #fff; color: #0A0A0A; }
 
-    /* Widget frame accent -> neon */
     .widget-frame::before { background: var(--accent); }
     .widget-frame::after { background: radial-gradient(circle, rgba(255,30,30,0.15), transparent 70%); }
 
-    /* Mobile bar */
     .mobile-bar { background: #0D0D0D; border-top: 1px solid var(--line); }
     .mobile-bar a { color: var(--text-soft); }
     .mobile-bar a.call { background: var(--accent); color: #fff; }
@@ -705,14 +701,14 @@
   <!-- ========================= EMERGENCY STRIP ========================= -->
   <div class="emergency-strip">
     <div class="container">
-      🚨 Just had an accident? <a href="tel:+60136208713">Call our workshop now →</a>
+      🚨 Baru lepas accident? <a href="tel:+60136208713">Call bengkel kami sekarang →</a>
     </div>
   </div>
 
   <!-- ========================= TOP BAR ========================= -->
   <div class="topbar">
     <div class="container">
-      <span>🕗 Mon to Sat 9:00 AM to 6:00 PM</span>
+      <span>🕗 Isnin hingga Sabtu 9:00 AM ke 6:00 PM</span>
       <span>📞 <a href="tel:+60136208713">013-620 8713</a> · ☎️ <a href="tel:+60387336853">03-8733 6853</a> · <a href="mailto:afaautoservice@gmail.com">Email</a></span>
     </div>
   </div>
@@ -721,21 +717,23 @@
   <header class="header">
     <div class="container">
       <a href="/" class="brand" aria-label="AFA Auto Service, Home">
-        <img src="assets/afa-logo.png" alt="AFA Auto Service" class="brand-logo" />
+        <span class="brand-mark">AFA</span>
+        <span>Auto Service</span>
       </a>
 
+      <button id="langToggle" class="lang-toggle" type="button" aria-label="Tukar bahasa">EN</button>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="navToggle">☰</button>
 
       <nav class="nav" id="nav">
-        <a href="#services">Services</a>
-        <a href="#work">Before/After</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#location">Location</a>
-        <a href="#contact">Estimate</a>
+        <a href="#services">Servis Kami</a>
+        <a href="#work">Hasil Kerja</a>
+        <a href="#reviews">Review</a>
+        <a href="#location">Lokasi</a>
+        <a href="#contact">Free Estimate</a>
       </nav>
 
       <a href="tel:+60136208713" class="header-phone">
-        <span class="lbl">Call the workshop</span>
+        <span class="lbl">Hubungi bengkel kami</span>
         <span class="num">013-620 8713</span>
       </a>
     </div>
@@ -746,30 +744,29 @@
     <!-- ========================= HERO ========================= -->
     <section class="hero" aria-labelledby="hero-heading">
       <div class="container">
-        <span class="section-eyebrow" style="color: var(--yellow);">★★★★★ 5.0 · 76 Google Reviews</span>
+        <span class="section-eyebrow" style="color: var(--yellow);">★★★★★ 5.0 (76 Google Review)</span>
         <h1 id="hero-heading">
-          Kajang's Trusted<br />
-          <span class="accent">Collision &amp; Bodywork</span><br />
-          Experts.
+          Pakar <span class="accent">Collision &amp; Bodywork</span><br />
+          Paling Dipercayai Di Kajang.
         </h1>
         <p class="lead">
-          Seamless insurance claim repairs, factory-condition bodywork, and oven-baked paintwork. From tow-in to hand-over, we handle everything.
+          Urusan claim insurans yang mudah, hasil bodywork macam keluar kilang, dan cat oven berkualiti tinggi. Dari urusan towing sampailah serah kunci, we settle everything for you.
         </p>
 
         <div class="hero-cta">
-          <a href="https://wa.me/60136208713?text=Hi%20AFA%2C%20saya%20nak%20free%20estimate"
+          <a href="https://wa.me/60136208713?text=Hi%20AFA%2C%20saya%20nak%20dapatkan%20free%20estimate"
              class="btn btn-primary" target="_blank" rel="noopener">
-            💬 Free Estimate
+            💬 Dapatkan Free Estimate
           </a>
           <a href="tel:+60136208713" class="btn btn-outline-white">
-            📞 Call Now
+            📞 Call Sekarang
           </a>
         </div>
 
         <a href="tel:+60136208713" class="hero-phone-big">
           <span class="icon">📞</span>
           <span>
-            <span class="lbl">24/7 Workshop Line</span>
+            <span class="lbl">Talian Bantuan 24/7</span>
             <span class="num">013-620 8713</span>
           </span>
         </a>
@@ -782,29 +779,29 @@
         <div class="trust-item">
           <div class="icon">⭐</div>
           <div>
-            <h4>5-Star Rated</h4>
-            <p>76 verified Google reviews</p>
+            <h4>Rating 5 Bintang</h4>
+            <p>76 review Google yang disahkan</p>
           </div>
         </div>
         <div class="trust-item">
           <div class="icon">🛡️</div>
           <div>
-            <h4>Insurance Accepted</h4>
-            <p>All major insurers &amp; takaful</p>
+            <h4>Terima Semua Insurans</h4>
+            <p>Semua syarikat insurans &amp; takaful utama</p>
           </div>
         </div>
         <div class="trust-item">
           <div class="icon">✓</div>
           <div>
-            <h4>Panel Repairer</h4>
-            <p>Etiqa · Etiqa Takaful · Syarikat Takaful</p>
+            <h4>Bengkel Panel Rasmi</h4>
+            <p>Etiqa, Etiqa Takaful, Syarikat Takaful</p>
           </div>
         </div>
         <div class="trust-item">
           <div class="icon">🎨</div>
           <div>
-            <h4>Cat Oven Paint</h4>
-            <p>Factory-baked finish</p>
+            <h4>Cat Oven Kualiti Premium</h4>
+            <p>Kemasan tahan lasak standard kilang</p>
           </div>
         </div>
       </div>
@@ -813,13 +810,13 @@
     <!-- ========================= EMPATHY ========================= -->
     <section class="empathy" aria-labelledby="empathy-heading">
       <div class="container">
-        <span class="section-eyebrow">Just had an accident?</span>
-        <h2 class="section-title" id="empathy-heading">Take a breath. We handle the rest.</h2>
-        <p>The tow. The police report. The insurance forms. From the moment you call, our workshop takes over. We coordinate with your insurer, repair your car to factory condition, and return it looking the way it did before the accident.</p>
+        <span class="section-eyebrow">Baru lepas accident?</span>
+        <h2 class="section-title" id="empathy-heading">Tarik nafas dan bertenang. Biar kami uruskan semuanya.</h2>
+        <p>Urusan towing kereta, report polis, sampailah ke form claim insurans, memang pening. Tapi bermula dari saat anda call, pihak bengkel akan take over. Kami akan berurusan terus dengan pihak insurans anda, repair kenderaan jadi macam keadaan asal kilang, dan pulangkan kereta anda berkilat macam tak pernah accident.</p>
         <div class="hero-cta" style="justify-content: center;">
-          <a href="tel:+60136208713" class="btn btn-primary">📞 Call Now</a>
-          <a href="https://wa.me/60136208713?text=Hi%20AFA%2C%20saya%20accident%20dan%20nak%20tanya%20pasal%20insurance%20claim"
-             class="btn btn-outline-dark" target="_blank" rel="noopener">💬 WhatsApp a Photo</a>
+          <a href="tel:+60136208713" class="btn btn-primary">📞 Call Sekarang</a>
+          <a href="https://wa.me/60136208713?text=Hi%20AFA%2C%20saya%20accident%20dan%20nak%20tanya%20pasal%20claim%20insurans"
+             class="btn btn-outline-dark" target="_blank" rel="noopener">💬 WhatsApp Gambar Kereta</a>
         </div>
       </div>
     </section>
@@ -827,9 +824,9 @@
     <!-- ========================= SERVICES ========================= -->
     <section id="services" aria-labelledby="services-heading">
       <div class="container center">
-        <span class="section-eyebrow">What We Do</span>
-        <h2 class="section-title" id="services-heading">Full-service collision &amp; bodywork.</h2>
-        <p class="section-intro">Every job passes through the same technicians. Structural integrity first. Cosmetics second. Never the other way around.</p>
+        <span class="section-eyebrow">Kepakaran Kami</span>
+        <h2 class="section-title" id="services-heading">Servis penuh body &amp; paint.</h2>
+        <p class="section-intro">Setiap kerja dilakukan oleh technician kami yang berpengalaman. Kami utamakan integriti struktur kenderaan, barulah kosmetik. Keselamatan anda adalah keutamaan kami.</p>
       </div>
 
       <div class="container">
@@ -837,29 +834,29 @@
           <article class="service-card">
             <div class="num">01</div>
             <h3>Accident Repair</h3>
-            <p>Full collision repair from tow-in to hand-over. Insurance coordinated. Panel work handled.</p>
-            <a href="#contact">Get Estimate →</a>
+            <p>Servis repair penuh dari towing sampai hand over. Segala urusan claim insurans dan ketuk panel kami handle.</p>
+            <a href="#contact">Dapatkan Estimate →</a>
           </article>
 
           <article class="service-card">
             <div class="num">02</div>
             <h3>Bodywork &amp; Dents</h3>
-            <p>Panel damage <em>ketuk</em>, straightened and realigned to <em>balik asal</em>. Factory precision.</p>
-            <a href="#contact">Get Estimate →</a>
+            <p>Kerosakan kemik akan diketuk, diluruskan dan align semula bagi balik asal. Precision kilang, confirm puas hati.</p>
+            <a href="#contact">Dapatkan Estimate →</a>
           </article>
 
           <article class="service-card">
             <div class="num">03</div>
             <h3>Paint &amp; Refinishing</h3>
-            <p>Colour-matched oven-baked paint. Single panels, full resprays, and colour changes.</p>
-            <a href="#contact">Get Estimate →</a>
+            <p>Cat oven tahan lasak yang colour matched dengan warna asal kereta. Nak cat satu panel, full body respray atau tukar warna pun boleh.</p>
+            <a href="#contact">Dapatkan Estimate →</a>
           </article>
 
           <article class="service-card">
             <div class="num">04</div>
             <h3>Mechanic Services</h3>
-            <p>Servicing, brakes, suspension. So the car that looks good runs well too.</p>
-            <a href="#contact">Get Estimate →</a>
+            <p>Servis enjin, brek dan suspension. Barulah kereta bukan je nampak cantik dari luar, tapi sedap dan selamat bila drive.</p>
+            <a href="#contact">Dapatkan Estimate →</a>
           </article>
         </div>
       </div>
@@ -868,9 +865,9 @@
     <!-- ========================= ALL MAKES WELCOME ========================= -->
     <section class="makes" aria-labelledby="makes-heading">
       <div class="container center">
-        <span class="section-eyebrow">All Makes Welcome</span>
-        <h2 class="section-title" id="makes-heading">Every brand, every model.</h2>
-        <p class="section-intro">From daily-drive Peroduas to European luxury and pickups, we've worked on it.</p>
+        <span class="section-eyebrow">Semua Jenis Kereta Boleh</span>
+        <h2 class="section-title" id="makes-heading">Setiap brand, setiap model kami layan.</h2>
+        <p class="section-intro">Dari Perodua yang buat daily drive, kereta continental mewah, sampailah ke 4x4 pickup, team kami dah biasa handle.</p>
 
         <div class="makes-grid">
           <div class="make-item">Perodua</div>
@@ -892,41 +889,41 @@
     <!-- ========================= BEFORE/AFTER ========================= -->
     <section id="work" aria-labelledby="work-heading">
       <div class="container center">
-        <span class="section-eyebrow">Our Work</span>
-        <h2 class="section-title" id="work-heading">See the difference.</h2>
-        <p class="section-intro">Real cars, real repairs, real customers. [Placeholder: replace with actual before/after photos.]</p>
+        <span class="section-eyebrow">Hasil Kerja Kami</span>
+        <h2 class="section-title" id="work-heading">Tengok Sendiri Perubahannya.</h2>
+        <p class="section-intro">Kereta real, repair real, customer kami yang real. [Placeholder: gantikan dengan gambar sebelum/selepas yang sebenar.]</p>
       </div>
 
       <div class="container">
         <div class="work-grid">
           <div class="work-card">
             <div class="work-images">
-              <div>BEFORE</div>
-              <div>AFTER</div>
+              <div>SEBELUM</div>
+              <div>SELEPAS</div>
             </div>
             <div class="work-info">
-              <h4>Rear bumper collision</h4>
-              <p>Perodua Myvi · Insurance claim · 5 working days</p>
+              <h4>Kerosakan bumper belakang</h4>
+              <p>Perodua Myvi, claim insurans, siap dalam 5 hari bekerja</p>
             </div>
           </div>
           <div class="work-card">
             <div class="work-images">
-              <div>BEFORE</div>
-              <div>AFTER</div>
+              <div>SEBELUM</div>
+              <div>SELEPAS</div>
             </div>
             <div class="work-info">
               <h4>Full respray</h4>
-              <p>Honda City · Colour change · Cat oven</p>
+              <p>Honda City, tukar warna baru, masuk cat oven premium</p>
             </div>
           </div>
           <div class="work-card">
             <div class="work-images">
-              <div>BEFORE</div>
-              <div>AFTER</div>
+              <div>SEBELUM</div>
+              <div>SELEPAS</div>
             </div>
             <div class="work-info">
-              <h4>Door panel dent</h4>
-              <p>Toyota Vios · Panel replacement · 3 working days</p>
+              <h4>Kemik di pintu</h4>
+              <p>Toyota Vios, tukar panel baru, siap dalam 3 hari bekerja</p>
             </div>
           </div>
         </div>
@@ -936,25 +933,20 @@
     <!-- ========================= REVIEWS ========================= -->
     <section id="reviews" class="reviews-band" aria-labelledby="reviews-heading">
       <div class="container">
-        <span class="section-eyebrow" style="color: var(--yellow);">Testimonials</span>
-        <h2 class="section-title" id="reviews-heading">What Our Customers Say</h2>
+        <span class="section-eyebrow" style="color: var(--yellow);">Apa Kata Mereka</span>
+        <h2 class="section-title" id="reviews-heading">Review Dari Customer Kami</h2>
 
         <div class="rating-hero">
           <div class="rating-big">5.0</div>
           <div>
             <div class="stars">★★★★★</div>
-            <p>5.0 Star Rating &middot; 76+ Reviews on Google</p>
+            <p>Rating 5.0 Bintang, 76+ Review di Google</p>
           </div>
         </div>
 
         <div class="widget-frame">
           <!-- ============================================================
-               GOOGLE REVIEWS — working self-contained carousel.
-               Populated from the AFA_REVIEWS array in the script near </body>.
-               To show your LIVE Google feed instead, replace the .gr-widget
-               below with a third-party embed, e.g. Elfsight:
-                 <div class="elfsight-app-XXXXXXXX-XXXX" data-elfsight-app-lazy></div>
-               (+ its platform script), then remove the AFA_REVIEWS script.
+               GOOGLE REVIEWS
                ============================================================ -->
           <div class="gr-widget" id="grWidget" role="region" aria-roledescription="carousel" aria-label="Customer reviews">
             <div class="gr-track" id="grTrack"></div>
@@ -963,24 +955,24 @@
         </div>
 
         <div class="widget-cta">
-          <a href="https://www.google.com/search?q=AFA+Auto+Service+Kajang+Reviews" target="_blank" rel="noopener" class="btn btn-primary">Read Reviews on Google</a>
+          <a href="https://www.google.com/search?q=AFA+Auto+Service+Kajang+Reviews" target="_blank" rel="noopener" class="btn btn-primary">Baca Review Asal di Google</a>
         </div>
-        <p class="widget-note">Sample reviews shown for layout. Connect your Elfsight or Trustindex embed to display the live Google feed.</p>
+        <p class="widget-note">Contoh review dipaparkan untuk layout. Sambungkan widget Elfsight atau Trustindex untuk paparkan feed Google yang live.</p>
       </div>
     </section>
 
     <!-- ========================= LOCATION ========================= -->
     <section id="location" aria-labelledby="location-heading">
       <div class="container center">
-        <span class="section-eyebrow">Find Us</span>
+        <span class="section-eyebrow">Cari Kami Di Sini</span>
         <h2 class="section-title" id="location-heading">Batu 12, Jalan Cheras.</h2>
-        <p class="section-intro">Serving drivers since 2019.</p>
+        <p class="section-intro">Sedia berkhidmat untuk pemandu sejak tahun 2019.</p>
       </div>
 
       <div class="container">
         <div class="location-wrap">
           <div class="location-info">
-            <h3>Workshop Address</h3>
+            <h3>Alamat Bengkel</h3>
             <address>
               Lot 718A, Batu 12,<br />
               Jalan Cheras,<br />
@@ -988,16 +980,16 @@
             </address>
 
             <div style="font-size: 0.95rem; line-height: 1.9; margin: 1.5rem 0; padding: 1.25rem 0; border-top: 1px solid rgba(255,255,255,0.18); border-bottom: 1px solid rgba(255,255,255,0.18);">
-              📞 <a href="tel:+60136208713" style="color: #fff;"><strong>013-620 8713</strong></a> <span style="color: rgba(255,255,255,0.8);">Fadzir · Mobile / WhatsApp</span><br />
+              📞 <a href="tel:+60136208713" style="color: #fff;"><strong>013-620 8713</strong></a> <span style="color: rgba(255,255,255,0.8);">Fadzir / Mobile / WhatsApp</span><br />
               📞 <a href="tel:+60132727833" style="color: #fff;">013-272 7833</a> <span style="color: rgba(255,255,255,0.8);">Angah</span><br />
-              ☎️ <a href="tel:+60387336853" style="color: #fff;">03-8733 6853</a> <span style="color: rgba(255,255,255,0.8);">Office</span><br />
+              ☎️ <a href="tel:+60387336853" style="color: #fff;">03-8733 6853</a> <span style="color: rgba(255,255,255,0.8);">Pejabat</span><br />
               ✉️ <a href="mailto:afaautoservice@gmail.com" style="color: #fff;">afaautoservice@gmail.com</a>
             </div>
 
             <div class="hours">
-              <strong>Opening Hours</strong>
-              <p>Monday to Saturday · 9:00 AM to 6:00 PM</p>
-              <p>Sunday · Closed</p>
+              <strong>Waktu Operasi</strong>
+              <p>Isnin hingga Sabtu, 9:00 pagi ke 6:00 petang</p>
+              <p>Ahad, Tutup</p>
             </div>
 
             <div class="location-cta">
@@ -1010,7 +1002,7 @@
           <iframe
             class="map-frame"
             src="https://www.google.com/maps?q=Lot+718A+Batu+12+Jalan+Cheras+Kajang+Selangor&output=embed"
-            title="AFA Auto Service location on Google Maps"
+            title="Lokasi AFA Auto Service di Google Maps"
             loading="lazy">
           </iframe>
         </div>
@@ -1024,55 +1016,57 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img src="assets/afa-logo.png" alt="AFA Auto Service" style="height:40px;width:auto;display:block;margin-bottom:1rem;" />
           <h4>AFA AUTO SERVICE SDN. BHD.</h4>
-          <p style="margin: 0 0 1rem; max-width: 36ch;">5.0-rated collision and bodywork specialists. Official panel repairer for Etiqa, Etiqa Takaful &amp; Syarikat Takaful Malaysia.</p>
+          <p style="margin: 0 0 1rem; max-width: 36ch;">Pakar repair kemalangan dan cat kenderaan dengan rating 5.0 bintang. Bengkel panel rasmi untuk Etiqa, Etiqa Takaful, dan Syarikat Takaful Malaysia.</p>
           <p style="font-size: 0.82rem; color: #7c848e; margin: 0;">
-            Company Reg. No. 1352417-U
+            No. Pendaftaran Syarikat 1352417-U
           </p>
         </div>
         <div>
-          <h4>Services</h4>
+          <h4>Servis</h4>
           <ul>
-            <li><a href="#services">Insurance Claims</a></li>
-            <li><a href="#services">Windscreen Claims</a></li>
-            <li><a href="#services">Body Repair &amp; Painting</a></li>
-            <li><a href="#services">Services &amp; Maintenance</a></li>
+            <li><a href="#services">Claim Insurans</a></li>
+            <li><a href="#services">Claim Cermin Depan</a></li>
+            <li><a href="#services">Body Repair &amp; Cat</a></li>
+            <li><a href="#services">Servis &amp; Maintenance</a></li>
           </ul>
         </div>
         <div>
-          <h4>Contact</h4>
+          <h4>Hubungi Kami</h4>
           <ul>
             <li>📞 <a href="tel:+60136208713">013-620 8713</a> Fadzir</li>
             <li>📞 <a href="tel:+60132727833">013-272 7833</a> Angah</li>
-            <li>☎️ <a href="tel:+60387336853">03-8733 6853</a> Office</li>
+            <li>☎️ <a href="tel:+60387336853">03-8733 6853</a> Pejabat</li>
             <li>💬 <a href="https://wa.me/60136208713" target="_blank" rel="noopener">WhatsApp</a></li>
             <li>✉️ <a href="mailto:afaautoservice@gmail.com">Email</a></li>
             <li>📘 <a href="https://www.facebook.com/afabodypaint21/" target="_blank" rel="noopener">Facebook</a></li>
           </ul>
         </div>
         <div>
-          <h4>Hours</h4>
+          <h4>Waktu Operasi</h4>
           <ul>
-            <li>Mon to Sat: 9:00 to 6:00</li>
-            <li>Sunday: Closed</li>
+            <li>Isnin ke Sabtu: 9:00 ke 6:00</li>
+            <li>Ahad: Tutup</li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
         <span>© 2026 AFA AUTO SERVICE SDN. BHD.</span>
-        <span>Kajang · Selangor · Malaysia</span>
+        <span>Kajang, Selangor, Malaysia</span>
       </div>
     </div>
   </footer>
 
   <!-- WhatsApp float -->
   <a href="https://wa.me/60136208713?text=Hi%20AFA%2C%20saya%20nak%20tanya%20pasal%20repair%20kereta"
-     class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp us">💬</a>
+     class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp kami">💬</a>
+
+  <!-- Back to top -->
+  <button id="backToTop" class="back-to-top" type="button" aria-label="Kembali ke atas">&#8593;</button>
 
   <!-- Mobile action bar -->
-  <nav class="mobile-bar" aria-label="Quick contact">
+  <nav class="mobile-bar" aria-label="Panggilan Pantas">
     <a href="tel:+60136208713" class="call"><span>📞</span><span>Call Now</span></a>
     <a href="https://waze.com/ul?q=AFA%20Auto%20Service%20Kajang" target="_blank" rel="noopener"><span>🧭</span><span>Waze</span></a>
     <a href="#contact"><span>📝</span><span>Estimate</span></a>
@@ -1094,8 +1088,6 @@
   <!-- ===================== GOOGLE REVIEWS CAROUSEL ===================== -->
   <script>
     (function () {
-      // Sample reviews for layout. Replace with real Google reviews, or swap
-      // the .gr-widget markup for a live third-party embed (Elfsight/Trustindex).
       var AFA_REVIEWS = [
         { text: "Kereta accident teruk depan, tapi lepas repair nampak macam baru. Insurance claim pun AFA uruskan semua. Puas hati!", name: "Ahmad R.", meta: "Google Review" },
         { text: "Fast and honest. They explained exactly what was needed and the paint match on my Myvi was flawless. Highly recommend.", name: "Nurul H.", meta: "Google Review" },
@@ -1129,6 +1121,111 @@
       }
       function start() { clearInterval(timer); timer = setInterval(function () { go(idx + 1); }, 5000); }
       start();
+    })();
+  </script>
+
+  <!-- ===================== LANGUAGE (Malay default) + BACK TO TOP ===================== -->
+  <script>
+    (function () {
+      var DICT = [
+        {ms:"🚨 Baru lepas accident?",en:"🚨 Just had an accident?"},
+        {ms:"Call bengkel kami sekarang →",en:"Call our workshop now →"},
+        {ms:"🕗 Isnin hingga Sabtu 9:00 AM ke 6:00 PM",en:"🕗 Monday to Saturday 9:00 AM to 6:00 PM"},
+        {ms:"Servis Kami",en:"Our Services"},
+        {ms:"Hasil Kerja",en:"Our Work"},
+        {ms:"Review",en:"Reviews"},
+        {ms:"Lokasi",en:"Location"},
+        {ms:"Hubungi bengkel kami",en:"Call our workshop"},
+        {ms:"★★★★★ 5.0 (76 Google Review)",en:"★★★★★ 5.0 (76 Google Reviews)"},
+        {ms:"Pakar",en:"Kajang's Trusted"},
+        {ms:"Paling Dipercayai Di Kajang.",en:"Experts."},
+        {ms:"Urusan claim insurans yang mudah, hasil bodywork macam keluar kilang, dan cat oven berkualiti tinggi. Dari urusan towing sampailah serah kunci, we settle everything for you.",en:"Easy insurance claims, factory-fresh bodywork, and premium oven-baked paint. From towing to handing back your keys, we settle everything for you."},
+        {ms:"💬 Dapatkan Free Estimate",en:"💬 Get A Free Estimate"},
+        {ms:"📞 Call Sekarang",en:"📞 Call Now"},
+        {ms:"Talian Bantuan 24/7",en:"24/7 Helpline"},
+        {ms:"Rating 5 Bintang",en:"5 Star Rating"},
+        {ms:"76 review Google yang disahkan",en:"76 verified Google reviews"},
+        {ms:"Terima Semua Insurans",en:"All Insurance Accepted"},
+        {ms:"Semua syarikat insurans & takaful utama",en:"All major insurance & takaful companies"},
+        {ms:"Bengkel Panel Rasmi",en:"Official Panel Repairer"},
+        {ms:"Cat Oven Kualiti Premium",en:"Premium Oven Baked Paint"},
+        {ms:"Kemasan tahan lasak standard kilang",en:"Durable, factory-standard finish"},
+        {ms:"Baru lepas accident?",en:"Just had an accident?"},
+        {ms:"Tarik nafas dan bertenang. Biar kami uruskan semuanya.",en:"Take a breath and relax. Let us handle everything."},
+        {ms:"Urusan towing kereta, report polis, sampailah ke form claim insurans, memang pening. Tapi bermula dari saat anda call, pihak bengkel akan take over. Kami akan berurusan terus dengan pihak insurans anda, repair kenderaan jadi macam keadaan asal kilang, dan pulangkan kereta anda berkilat macam tak pernah accident.",en:"The towing, the police report, the insurance claim forms, it is a headache. But from the moment you call, the workshop takes over. We deal directly with your insurer, repair your vehicle back to factory condition, and return your car gleaming as if the accident never happened."},
+        {ms:"💬 WhatsApp Gambar Kereta",en:"💬 WhatsApp A Photo"},
+        {ms:"Kepakaran Kami",en:"Our Expertise"},
+        {ms:"Servis penuh body & paint.",en:"Full body & paint service."},
+        {ms:"Setiap kerja dilakukan oleh technician kami yang berpengalaman. Kami utamakan integriti struktur kenderaan, barulah kosmetik. Keselamatan anda adalah keutamaan kami.",en:"Every job is done by our experienced technicians. We prioritise the vehicle's structural integrity first, then the cosmetics. Your safety is our priority."},
+        {ms:"Servis repair penuh dari towing sampai hand over. Segala urusan claim insurans dan ketuk panel kami handle.",en:"Full repair service from towing to hand over. We handle all insurance claims and panel work."},
+        {ms:"Kerosakan kemik akan diketuk, diluruskan dan align semula bagi balik asal. Precision kilang, confirm puas hati.",en:"Dents are knocked out, straightened and realigned back to original. Factory precision, guaranteed satisfaction."},
+        {ms:"Cat oven tahan lasak yang colour matched dengan warna asal kereta. Nak cat satu panel, full body respray atau tukar warna pun boleh.",en:"Durable oven-baked paint colour matched to your car's original. Single panel, full body respray or a colour change, all possible."},
+        {ms:"Servis enjin, brek dan suspension. Barulah kereta bukan je nampak cantik dari luar, tapi sedap dan selamat bila drive.",en:"Engine, brake and suspension service. So your car not only looks good on the outside but drives smoothly and safely."},
+        {ms:"Dapatkan Estimate →",en:"Get An Estimate →"},
+        {ms:"Semua Jenis Kereta Boleh",en:"All Makes Welcome"},
+        {ms:"Setiap brand, setiap model kami layan.",en:"Every brand, every model, we handle it."},
+        {ms:"Dari Perodua yang buat daily drive, kereta continental mewah, sampailah ke 4x4 pickup, team kami dah biasa handle.",en:"From a daily-drive Perodua to a luxury continental car and 4x4 pickups, our team is used to handling them all."},
+        {ms:"Hasil Kerja Kami",en:"Our Work"},
+        {ms:"Tengok Sendiri Perubahannya.",en:"See The Difference Yourself."},
+        {ms:"Kereta real, repair real, customer kami yang real. [Placeholder: gantikan dengan gambar sebelum/selepas yang sebenar.]",en:"Real cars, real repairs, real customers. [Placeholder: replace with actual before/after photos.]"},
+        {ms:"SEBELUM",en:"BEFORE"},
+        {ms:"SELEPAS",en:"AFTER"},
+        {ms:"Kerosakan bumper belakang",en:"Rear bumper damage"},
+        {ms:"Perodua Myvi, claim insurans, siap dalam 5 hari bekerja",en:"Perodua Myvi, insurance claim, done in 5 working days"},
+        {ms:"Honda City, tukar warna baru, masuk cat oven premium",en:"Honda City, new colour change, premium oven baked paint"},
+        {ms:"Kemik di pintu",en:"Door dent"},
+        {ms:"Toyota Vios, tukar panel baru, siap dalam 3 hari bekerja",en:"Toyota Vios, new panel replacement, done in 3 working days"},
+        {ms:"Apa Kata Mereka",en:"What They Say"},
+        {ms:"Review Dari Customer Kami",en:"Reviews From Our Customers"},
+        {ms:"Rating 5.0 Bintang, 76+ Review di Google",en:"5.0 Star Rating, 76+ Reviews on Google"},
+        {ms:"Baca Review Asal di Google",en:"Read Reviews On Google"},
+        {ms:"Contoh review dipaparkan untuk layout. Sambungkan widget Elfsight atau Trustindex untuk paparkan feed Google yang live.",en:"Sample reviews shown for layout. Connect an Elfsight or Trustindex widget to display the live Google feed."},
+        {ms:"Cari Kami Di Sini",en:"Find Us Here"},
+        {ms:"Sedia berkhidmat untuk pemandu sejak tahun 2019.",en:"Proudly serving drivers since 2019."},
+        {ms:"Alamat Bengkel",en:"Workshop Address"},
+        {ms:"Pejabat",en:"Office"},
+        {ms:"Waktu Operasi",en:"Opening Hours"},
+        {ms:"Isnin hingga Sabtu, 9:00 pagi ke 6:00 petang",en:"Monday to Saturday, 9:00 AM to 6:00 PM"},
+        {ms:"Ahad, Tutup",en:"Sunday, Closed"},
+        {ms:"Pakar repair kemalangan dan cat kenderaan dengan rating 5.0 bintang. Bengkel panel rasmi untuk Etiqa, Etiqa Takaful, dan Syarikat Takaful Malaysia.",en:"5.0 star rated accident repair and vehicle paint specialists. Official panel repairer for Etiqa, Etiqa Takaful, and Syarikat Takaful Malaysia."},
+        {ms:"No. Pendaftaran Syarikat 1352417-U",en:"Company Reg. No. 1352417-U"},
+        {ms:"Servis",en:"Services"},
+        {ms:"Claim Insurans",en:"Insurance Claims"},
+        {ms:"Claim Cermin Depan",en:"Windscreen Claims"},
+        {ms:"Body Repair & Cat",en:"Body Repair & Painting"},
+        {ms:"Servis & Maintenance",en:"Service & Maintenance"},
+        {ms:"Hubungi Kami",en:"Contact Us"},
+        {ms:"Isnin ke Sabtu: 9:00 ke 6:00",en:"Mon to Sat: 9:00 to 6:00"},
+        {ms:"Ahad: Tutup",en:"Sunday: Closed"}
+      ];
+      var ms2en = {}; DICT.forEach(function (p) { ms2en[p.ms] = p.en; });
+      var lang = 'ms';
+      function apply(to) {
+        var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+        var nodes = [], n; while (n = w.nextNode()) nodes.push(n);
+        nodes.forEach(function (node) {
+          var p = node.parentNode; if (!p) return;
+          if (p.nodeName === 'SCRIPT' || p.nodeName === 'STYLE') return;
+          if (to === 'en') {
+            var raw = node.nodeValue, key = raw.trim();
+            if (key && ms2en[key]) { node._afaMs = raw; node.nodeValue = raw.replace(key, ms2en[key]); }
+          } else if (node._afaMs != null) {
+            node.nodeValue = node._afaMs;
+          }
+        });
+      }
+      var btn = document.getElementById('langToggle');
+      if (btn) btn.addEventListener('click', function () {
+        if (lang === 'ms') { apply('en'); lang = 'en'; document.documentElement.lang = 'en'; btn.textContent = 'BM'; }
+        else { apply('ms'); lang = 'ms'; document.documentElement.lang = 'ms'; btn.textContent = 'EN'; }
+      });
+      var toTop = document.getElementById('backToTop');
+      if (toTop) {
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 400) toTop.classList.add('show'); else toTop.classList.remove('show');
+        }, { passive: true });
+        toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+      }
     })();
   </script>
 </body>
